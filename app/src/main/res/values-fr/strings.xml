@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <!--- 法语 -->
+    <string name="app_name">Fyndr</string>
+    <string name="title_activity_maps">Localisation de votre véhicule</string>
+    <string name="ok">Déterminer</string>
+    <string name="cancel">Annuler</string>
+    <string name="delete">Supprimer</string>
+    <string name="sure">Supprimer</string>
+    <string name="nav_compass">Boussole</string>
+    <string name="nav_map">Carte</string>
+    <string name="nav_set_up">Réglages</string>
+    <string name="default_double_button_delay">300</string>
+    <string name="ble_not_supported">Pas de soutien Bluetooth à faible énergie</string>
+    <string name="location_distance_str">Distances ±%1$d %2$s</string>
+    <string name="car_is_nearby">Votre voiture est proche</string>
+    <string name="TurnOff">Éteindre</string>
+    <string name="Continue">Continuer</string>
+    <string name="alert_time_ten_mins_left">Vous recevrez une notification lorsqu\'il ne vous restera que 10 minutes.</string>
+    <string name="alert_time_time_up_str">Le temps est écoulé</string>
+    <string name="park_time_has_ten_mins_left">Il reste dix minutes</string>
+    <string name="park_time_time_up">Le temps est écoulé</string>
+    <string name="alert_disconnected_text">Location saved successfully.Do you want to set a parking meter alert?</string>
+    <string name="alert_locaion_fail_text">No GPS signal.We advise you to take a photo.</string>
+    <string name="setting_park_time_title">Le temps de stationnement de rappel sont disposés</string>
+    <string name="setting_park_time_30m">30 minutes</string>
+    <string name="setting_park_time_45m">45 minutes</string>
+    <string name="setting_park_time_1h">1 heure</string>
+    <string name="setting_park_time_2h">2 heure</string>
+    <string name="setting_park_time_3h">3 heure</string>
+    <string name="setting_park_time_4h">4 heure</string>
+    <string name="setting_park_time_more">Plus</string>
+    <string name="setting_park_time_close">Fermer</string>
+    <string name="setting_park_time_save">Sauvegarder</string>
+    <string name="setting_park_time_finish_alert">L\'alarme va être supprimée.</string>
+
+    <string-array name="setting_park_time_min_arr">
+        <item>0 minutes</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>20 minutes</item>
+        <item>25 minutes</item>
+        <item>30 minutes</item>
+        <item>35 minutes</item>
+        <item>40 minutes</item>
+        <item>45 minutes</item>
+        <item>50 minutes</item>
+        <item>55 minutes</item>
+    </string-array>
+
+    <string-array name="setting_park_time_hours_arr">
+        <item>0 heure</item>
+        <item>1 heure</item>
+        <item>2 heure</item>
+        <item>3 heure</item>
+        <item>4 heure</item>
+        <item>5 heure</item>
+        <item>6 heure</item>
+        <item>7 heure</item>
+        <item>8 heure</item>
+        <item>9 heure</item>
+        <item>10 heure</item>
+        <item>11 heure</item>
+        <item>12 heure</item>
+    </string-array>
+
+    <string name="location_succ_alert">Localisation réussie</string>
+    <string name="location_fail_alert">Échec de la localisation</string>
+    <string name="photo_mark_menu_title">Marquages au sol pour des repères utiles</string>
+    <string name="photo_mark_menu_Retake">Recommencer</string>
+    <string name="recommon_menu_open">L\'utilisation d\'un logiciel de navigation ouverte</string>
+    <string name="recommon_menu_Recommend">Recommander à mes amis</string>
+    <string name="share_title">Airdrop. Partager avec les gens autour de vous. Si vous ne les voyez pas, demandez-leur d\'activer Airdrop dans le centre de contrôle iOS, ou accéder à Airdrop par le Finder sur un Mac</string>
+    <string name="share_message">Message</string>
+    <string name="share_email">Mail</string>
+    <string name="share_more">Plus</string>
+    <string name="share_copy">Copier</string>
+    <string name="bind_bt_status_text">Connexion réussie</string>
+    <string name="compass_connected_title">Car Finder</string>
+    <string name="compass_connected_desc">ist verbunden</string>
+    <string name="unit_meters_upcase">Mètres</string>
+    <string name="unit_feet_upcase">Pieds</string>
+    <string name="compass_photo_tips_desc">Impossible d\'enregistrer la localisation，Veuillez prendre une photo du lieu où vous vous trouvez.</string>
+    <string name="compass_photo_take_photo_text">Prendre une photo</string>
+    <string name="compass_photo_tips">Une première couche</string>
+    <string name="compass_loaction_fail">Échec de la localisation</string>
+    <string name="compass_last_park_time">Dernier stationnement</string>
+    <string name="compass_park_time_less_minute">Il y a moins d\'une minute</string>
+    <string name="compass_action_desc">Appuyez sur le bouton Accueil pour fermer l\'application en la laissant travailler en arrière-plan</string>
+    <string name="fyndr_is_connect">ok...Fyndr Est connecté</string>
+    <string name="compass_within_text">Erreur %1$d %2$s</string>
+    <string name="compass_park_time_minute_ago">%1$d minute avant</string>
+    <string name="compass_park_time_hours_ago">%1$d heure %2$dminute avant</string>
+    <string name="found_devices_again">Veuillez réessayer</string>
+    <string name="map_ble_connected">Le succès de la connexion Bluetooth</string>
+    <string name="map_ble_disconnected">Un échec de la connexion</string>
+    <string name="open_bt_turn_on">Activer le bluetooth</string>
+    <string name="open_bt_setting">OK ! J\'ai compris !</string>
+    <string name="turn_on_ble_title">Veuillez activer le bluetooth</string>
+    <string name="turn_on_bel_desc">Fonction nécessaire pour se connecter</string>
+    <string name="turn_on_help">Besoin d\'aide</string>
+    <string name="ble_close_alert">Bluetooth désactivé. Activez le bluetooth pour que l\'application puisse enregistrer votre position de stationnement et déterminer la distance.</string>
+    <string name="setting_global_setting">Configuration</string>
+    <string name="setting_referral">Partager</string>
+    <string name="setting_support">Soutenir</string>
+    <string name="setting_ifu">Mode d\'emploi</string>
+    <string name="setting_common_problem">Dépannage</string>
+    <string name="setting_common_problems">Dépannage</string>
+    <string name="setting_contact_us">Nous contacter</string>
+    <string name="setting_remove">Supprimer</string>
+    <string name="setting_sound_remind">Rappel sonore</string>
+    <string name="setting_information_notification">Notification</string>
+    <string name="setting_unit_title">Unité</string>
+    <string name="setting_unit_feet">Pieds</string>
+    <string name="setting_unit_meters">Mètres</string>
+    <string name="setting_about">Über</string>
+    <string name="setting_use_desc">Bedienungsanleitung</string>
+    <string name="setting_use_desc_close">Zurück</string>
+    <string name="useragreement_tac">AGB</string>
+    <string name="useragreement_pp">Datenschutz</string>
+    <string name="useragreement_imprint">Impressum</string>
+    <string name="setting">Réglages</string>
+    <string name="setting_version">Version: %1$s</string>
+    <string name="setting_remove_title">Supprimer la connexion avec l\'application</string>
+    <string name="setting_remove_content">Voulez-vous supprimer la connexion avec l\'application?</string>
+    <string name="contact_us_phone">+86-15920041298</string>
+    <string name="contact_us_email">service@zz-power.com</string>
+    <string name="contact_us_website">www.zz-power.com</string>
+    <string name="start_desc">Distance ±20 Mètres</string>
+    <string name="setting_version_title">version</string>
+    <string name="share_app_text">Cette application est très bien，Ne t\'inquiète pas pour la voiture de ne pas trouver</string>
+    <string name="common_problem_1_title">1. Que dois-je faire si l\'application n\'est pas reconnue par le géolocalisateur?</string>
+    <string name="common_problem_1_content"> Assurez-vous que le géolocalisateur est branché dans la prise allume-cigare et que le véhicule est démarré avant d\'essayer d\'apparier le géolocalisateur avec l\'application. Si cela ne résout pas le problème, éteignez votre téléphone complètement, puis rallumez-le avant de faire une nouvelle tentative d\'appariement.</string>
+    <string name="common_problem_2_title">2. Puis-je utiliser un autre appareil bluetooth avec l\'application ?</string>
+    <string name="common_problem_2_content">Le droit de faire ça, vous avez tout d\'abord dans la page de configuration de trouver le bouton \'supprimer\' confirmation de suppression, puis à connecter, de recherche, de dispositifs de connexion Bluetooth de nouveau</string>
+    <!-- notification -->
+    <string name="app_runing">Zitech pendant le fonctionnement</string>
+    <string name="alert_open_gps_title">Le GPS n\'est pas activé ?</string>
+    <string name="alert_open_gps_setting_btn">Configuration</string>
+    <!-- upgrade -->
+    <string name="upgrade_dialog_title">nouvelle version disponible</string>
+    <string name="upgrade_dialog_info">mise à jour log</string>
+    <string name="upgrade_dialog_btn_sure">mise à jour</string>
+    <string name="upgrade_dialog_btn_ignore">ignorer</string>
+    <string name="upgrade_dialog_btn_install">installer</string>
+    <string name="upgrade_dialog_gps_title">Utiliser le réseau mobile pour télécharger la nouvelle version ?</string>
+    <string name="upgrade_notify_download_start">Démarrage du téléchargement</string>
+    <string name="upgrade_notify_download_ing">Téléchargement …</string>
+    <string name="upgrade_notify_download_ing_progress">Téléchargement …</string>
+    <string name="upgrade_notify_download_done">Téléchargement effectué, cliquez pour installer</string>
+    <string name="upgrade_notify_download_fail">Échec du téléchargement de la nouvelle version</string>
+
+    <string name="ble_connecting_str">Recherche d\'appareils bluetooth</string>
+    <string name="sure_remove">Supprimer</string>
+</resources>

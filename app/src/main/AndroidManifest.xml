@@ -1,0 +1,233 @@
+<manifest package="com.vanpro.zitech125"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <permission
+        android:name="com.example.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.example.permission.MAPS_RECEIVE"/>
+
+    <application
+        android:name="com.vanpro.zitech125.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:exported="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
+        <meta-data
+        android:name="com.baidu.lbsapi.API_KEY"
+        android:value="LNuMwDvtfCM2wjG0YMzwOV4UIfG1OQCi" />
+
+        <uses-library android:name="com.google.android.maps"  android:required="false"/>
+
+        <meta-data android:value="57f8748de0f55ab712000927" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="anzhou" android:name="UMENG_CHANNEL"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.StartActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.APP_MAPS"/>
+
+                <data android:scheme="zitech"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseTheme"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.MapviewActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseTheme"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.ContactUsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.UseDescActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.TimeAlertActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.TurnOnBLEHelpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.GlobalSettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.WebviewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.CommonProblemActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.CommonProblemDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity android:name="com.vanpro.zitech125.ui.activity.UseragreementActivity"
+                  android:label="@string/setting_about"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <service
+            android:name="com.vanpro.zitech125.bluetooth.BluetoothLeService"
+            android:enabled="true"/>
+
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
+
+        <receiver android:name="com.vanpro.zitech125.alert.AlarmReceiver"/>
+
+        <receiver android:name="com.vanpro.zitech125.alert.DisconnectedReceiver"/>
+
+        <!--<receiver android:name=".ui.activity.MainActivity.GattUpdateReceiver">-->
+        <!--<intent-filter android:priority="20">-->
+        <!--<action android:name="com.vanpro.ziteach.bluetooth.le.ACTION_GATT_CONNECTED"/>-->
+        <!--<action android:name="com.vanpro.ziteach.bluetooth.le.ACTION_GATT_DISCONNECTED"/>-->
+        <!--<action android:name="com.vanpro.ziteach.bluetooth.le.ACTION_GATT_SERVICES_DISCOVERED"/>-->
+        <!--<action android:name="com.vanpro.ziteach.bluetooth.le.ACTION_DATA_AVAILABLE"/>-->
+        <!--<action android:name="com.vanpro.ziteach.bluetooth.le.ACTION_LOCATION_SUCCESS"/>-->
+        <!--<action android:name="com.vanpro.ziteach.bluetooth.le.ACTION_LOCATION_FAIL"/>-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!-- daemon service -->
+        <!--
+        <receiver
+            android:name=".daemon.receiver.WakeUpReceiver"
+            android:process=":watch">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+                <action android:name="com.xdandroid.hellodaemon.CANCEL_JOB_ALARM_SUB"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".daemon.receiver.WakeUpReceiver$WakeUpAutoStartReceiver"
+            android:process=":watch">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".daemon.service.WorkService"/>
+
+        <service android:name=".daemon.service.WorkService$WorkNotificationService"/>
+
+        <service
+            android:name=".daemon.service.JobSchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":watch"/>
+
+        <service
+            android:name=".daemon.service.LifecycleService"
+            android:process=":watch"/>
+
+        <service
+            android:name=".daemon.service.LifecycleService$LifecycleNotificationService"
+            android:process=":watch"/>
+        -->
+        <!-- daemon service -->
+
+    </application>
+</manifest>

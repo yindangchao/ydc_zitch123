@@ -1,0 +1,183 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="BaseTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TransparentTheme" parent="BaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- Dialog-->
+    <style name="dialog_parent_style" parent="@android:style/Theme.DeviceDefault.Dialog.NoActionBar">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <!-- 点击屏幕dialog消失 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="customDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="loadingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+
+    <style name="TransparentDialog" parent="dialog_parent_style"></style>
+
+    <style name="pop_bottom_in_out_anim_style">
+        <item name="android:windowEnterAnimation">@anim/anim_pop_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_pop_bottom_out</item>
+    </style>
+
+    <style name="dialogButtom" parent="dialog_parent_style">
+        <!-- 动画 -->
+        <item name="android:windowAnimationStyle">@style/pop_bottom_in_out_anim_style</item>
+    </style>
+
+    <!-- ProgressBar -->
+    <style name="BaseProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progress">0</item>
+        <item name="android:max">100</item>
+    </style>
+
+
+    <!-- toolbar view style -->
+    <style name="toolbar_img_btn_style">
+        <item name="android:layout_width">@dimen/title_bar_height</item>
+        <item name="android:layout_height">@dimen/title_bar_height</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:padding">@dimen/dp_12</item>
+    </style>
+
+    <style name="toolbar_tx_btn_style">
+        <item name="android:layout_width">@dimen/title_bar_height</item>
+        <item name="android:layout_height">@dimen/title_bar_height</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+
+
+    <style name="main_tab_icon_style">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">@dimen/dp_2</item>
+        <item name="android:paddingTop">@dimen/dp_5</item>
+        <item name="android:paddingBottom">@dimen/dp_5</item>
+        <item name="android:textColor">@drawable/selector_main_nav_text</item>
+        <item name="android:textSize">@dimen/font_11</item>
+
+    </style>
+
+    <style name="main_tab_line_style">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:background">@color/common_orgin_color</item>
+    </style>
+
+
+    <style name="dialog_photo_menu_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/photo_menu_item_text</item>
+        <item name="android:background">@drawable/photo_menu_item_bg</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="dialog_recommon_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/recommon_item_text</item>
+        <item name="android:background">@drawable/dialog_recommon_item_bg</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="dialog_share_item_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/font_12</item>
+        <item name="android:drawablePadding">@dimen/dp_3</item>
+        <item name="android:textColor">@color/recommon_item_text</item>
+        <item name="android:layout_marginLeft">@dimen/dp_9</item>
+    </style>
+
+    <style name="setting_item_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_55</item>
+        <item name="android:layout_marginLeft">@dimen/dp_14</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/font_15</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="setting_item_text_layout_style" parent="setting_item_text_style">
+        <item name="android:drawableRight">@drawable/comom_arrow_right</item>
+        <item name="android:paddingRight">@dimen/dp_20</item>
+        <item name="android:paddingLeft">@dimen/dp_2</item>
+        <item name="android:drawablePadding">@dimen/dp_16</item>
+    </style>
+
+
+    <style name="view_compass_item_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+</resources>

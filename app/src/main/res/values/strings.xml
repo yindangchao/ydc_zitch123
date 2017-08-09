@@ -1,0 +1,233 @@
+<resources>
+    <!--- 英语 -->
+    <string name="app_name">Fyndr</string>
+    <string name="title_activity_maps">Fyndr</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="sure">Sure</string>
+
+    <!--- main tab -->
+    <string name="nav_compass">Compass</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_set_up">Set up</string>
+
+    <string name="default_double_button_delay">300</string>
+
+    <string name="ble_not_supported">BLE is not supported</string>
+
+    <string name="location_distance_str">Distance ±%1$d %2$s</string>
+
+    <string name="car_is_nearby">Your car is nearby</string>
+
+    <!--- time alert -->
+    <string name="TurnOff">Turn off</string>
+    <string name="Continue">Continue</string>
+    <string name="alert_time_ten_mins_left">You will be notified when you have 10 mins left</string>
+    <string name="alert_time_time_up_str">Time is up at </string>
+    <string name="park_time_has_ten_mins_left">ten minutes left</string>
+    <string name="park_time_time_up">Time is up</string>
+
+    <string name="alert_disconnected_text">Loction saved successfully.Do you want to set a parking meter alert?</string>
+    <string name="alert_locaion_fail_text">No GPS signal.we advise you to takea photo.</string>
+
+    <!--- alert time dialog -->
+    <string name="setting_park_time_title">Set the parking time\nto remind you</string>
+    <string name="setting_park_time_30m">30 minutes</string>
+    <string name="setting_park_time_45m">45 minutes</string>
+    <string name="setting_park_time_1h">1 hour</string>
+    <string name="setting_park_time_2h">2 hours</string>
+    <string name="setting_park_time_3h">3 hours</string>
+    <string name="setting_park_time_4h">4 hours</string>
+    <string name="setting_park_time_more">more</string>
+    <string name="setting_park_time_close">close</string>
+    <string name="setting_park_time_save">save</string>
+    <string name="setting_park_time_finish_alert">The alarm will be removed after closure, are you sure?</string>
+
+    <string name="location_succ_alert">Location success</string>
+    <string name="location_fail_alert">Location failed </string>
+
+    <string-array name="setting_park_time_min_arr">
+        <item>0 mins</item>
+        <item>5 mins</item>
+        <item>10 mins</item>
+        <item>15 mins</item>
+        <item>20 mins</item>
+        <item>25 mins</item>
+        <item>30 mins</item>
+        <item>35 mins</item>
+        <item>40 mins</item>
+        <item>45 mins</item>
+        <item>50 mins</item>
+        <item>55 mins</item>
+    </string-array>
+
+    <string-array name="setting_park_time_hours_arr">
+        <item>0 hours</item>
+        <item>1 hours</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>4 hours</item>
+        <item>5 hours</item>
+        <item>6 hours</item>
+        <item>7 hours</item>
+        <item>8 hours</item>
+        <item>9 hours</item>
+        <item>10 hours</item>
+        <item>11 hours</item>
+        <item>12 hours</item>
+    </string-array>
+
+    <!-- photo mark menu-->
+    <string name="photo_mark_menu_title">Marking floor or helpful tips</string>
+    <string name="photo_mark_menu_Retake">Retake</string>
+
+    <!-- recommon menu -->
+    <string name="recommon_menu_open">Open in Map App</string>
+    <string name="recommon_menu_Recommend">Share</string>
+    <string name="share_title">AirDrop.Share with people nearby.If you don\'t see them have them turn on AirDropin Control Center on iOS.or go to AirDrop in Finder on A Mac.</string>
+    <string name="share_message">Message</string>
+    <string name="share_email">Email</string>
+    <string name="share_more">More</string>
+    <string name="share_copy">Copy</string>
+
+    <!-- bind bt -->
+    <string name="bind_bt_status_text">connected successful</string>
+
+    <!-- compass -->
+    <string name="compass_connected_desc">is connected</string>
+    <string name="unit_meters_upcase">METERS</string>
+    <string name="unit_feet_upcase">FEET</string>
+    <string name="compass_photo_tips_desc">Failed to save location \n take a photo of your whereabouts</string>
+    <string name="compass_photo_take_photo_text">Take a photo</string>
+    <string name="compass_photo_tips">First fool</string>
+    <string name="compass_loaction_fail">Location Failed</string>
+    <string name="compass_last_park_time">Last Parking Time</string>
+    <string name="compass_park_time_less_minute">Less than a minute ago</string>
+    <string name="compass_action_desc">Press home button to close the app\nleaving it working in the background</string>
+    <string name="fyndr_is_connect">ok...Fyndr is Connect</string>
+    <string name="compass_within_text">Within %1$d %2$s</string>
+    <string name="compass_park_time_minute_ago">%1$d mins ago</string>
+    <string name="compass_park_time_hours_ago">%1$d hours %2$d mins ago</string>
+
+    <string name="found_devices_again">Try again</string>
+
+    <!-- map -->
+    <string name="map_ble_connected">Zitech is connected</string>
+    <string name="map_ble_disconnected">Zitech is disconnected</string>
+
+    <!-- open bt -->
+    <string name="open_bt_turn_on">Turn On Bluetooth</string>
+    <string name="open_bt_setting">OK. I got it</string>
+
+    <string name="turn_on_ble_title">Please Turn On Bluetooth</string>
+    <string name="turn_on_bel_desc">Requested to connect with your Zitech</string>
+    <string name="turn_on_help">help?</string>
+    <string name="ble_close_alert">Bluetooth is off. Enable Bluetooth so the APP can save your parking location and log your miles.</string>
+
+    <!--- set up  -->
+    <string name="setting_global_setting">Global setting</string>
+    <string name="setting_referral">Share</string>
+    <string name="setting_support">Support</string>
+    <string name="setting_ifu">Instructions for use</string>
+    <string name="setting_common_problem">Common Problem</string>
+    <string name="setting_common_problems">Common Problems</string>
+    <string name="setting_contact_us">Contact Us</string>
+    <string name="setting_remove">REMOVE</string>
+    <string name="setting_sound_remind">Sound Remind</string>
+    <string name="setting_information_notification">Information Notification</string>
+    <string name="setting_unit_title">Unit</string>
+    <string name="setting_unit_feet">Feet</string>
+    <string name="setting_unit_meters">Meters</string>
+    <string name="setting">Setting</string>
+
+    <string name="setting_version">Version: %1$s</string>
+    <string name="setting_remove_title">Remove connected zitech</string>
+    <string name="setting_remove_content">Are you sure to remove?</string>
+
+    <!--- setting - contact -->
+    <string name="contact_us_phone">+86-15920041298</string>
+    <string name="contact_us_email">service@zz-power.com</string>
+    <string name="contact_us_website">www.zz-power.com</string>
+
+    <!-- start -->
+    <string name="start_desc">Distance ±20 Meters</string>
+
+    <string name="share_app_text">Where is your car？Zitech app can really help you.</string>
+
+
+    <string name="common_problem_1_title">1.What should I do if the Zitech app is not recogni
+zing the
+Zitech Car Charger?</string>
+
+    <string name="common_problem_1_content">Make sure that the Zitech Car Charger is plugged in
+to the
+car’s power socket and that your car’s engine is
+turned on
+before  attempting to pair the Zitech Charger
+with the
+ZItech app. if this doesn’t fix the issue ,please
+reboot/restart
+your phone by turning it off  completely
+and then turning it
+bank on. then try pairing again</string>
+
+    <string name="common_problem_2_title">2.Can I use another Bluetooth device to match the
+Zitech?</string>
+
+    <string name="common_problem_2_content">Allow this to be done,find the &#60;REMOVE&#62;in the sett
+ings
+page ,click OK,and then reconnect the  new
+Bluetooth device</string>
+
+    <string name="setting_version_title">Version Code v</string>
+
+    <!-- notification -->
+    <string name="app_runing">Zitech runing</string>
+    <string name="alert_open_gps_title">GPS is not activated?</string>
+    <string name="alert_open_gps_setting_btn">Set up</string>
+
+    <!-- upgrade -->
+    <string name="upgrade_dialog_title">new version available</string>
+    <string name="upgrade_dialog_info"> update log</string>
+    <string name="upgrade_dialog_btn_sure">update</string>
+    <string name="upgrade_dialog_btn_ignore">ignore</string>
+    <string name="upgrade_dialog_btn_install">install</string>
+    <string name="upgrade_dialog_gps_title">Use cellular data network to download new version？</string>
+    <string name="upgrade_notify_download_start">start to download</string>
+    <string name="upgrade_notify_download_ing">downloading...</string>
+    <string name="upgrade_notify_download_ing_progress">downloading</string>
+    <string name="upgrade_notify_download_done">Download complete, click to install</string>
+    <string name="upgrade_notify_download_fail">fail to download new version</string>
+
+    <!--
+TODO: Before you run your application, you need a Google Maps API key.
+
+To get one, follow this link, follow the directions and press "Create" at the end:
+
+https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=18:CD:66:D4:89:CA:BA:97:A3:D4:DC:87:00:C5:0A:CE:4A:16:05:9C%3Bcom.vanpro.zitech
+
+You can also add your credentials to an existing key, using this line:
+18:CD:66:D4:89:CA:BA:97:A3:D4:DC:87:00:C5:0A:CE:4A:16:05:9C;zitech125000
+
+Alternatively, follow the directions here:
+https://developers.google.com/maps/documentation/android/start#get-key
+
+Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+string in this file.
+-->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDbAxhjQ-JaPQk7OMm7utY8-VrdlfP36E4</string>
+
+
+    <string name="compass_connected_title">Zitech</string>
+    <string name="setting_about">Über</string>
+    <string name="useragreement_tac">AGB</string>
+    <string name="useragreement_pp">Datenschutz</string>
+    <string name="useragreement_imprint">Impressum</string>
+    <string name="setting_use_desc">Instructions for use</string>
+    <string name="setting_use_desc_close">Close</string>
+
+    <string name="ble_connecting_str">Searching for Bluetooth Devices</string>
+    <string name="sure_remove">remove</string>
+</resources>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:id="@+id/scrollView"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/common_bg"
+            android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <include layout="@layout/view_line_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/setting_item_text_style"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/setting_sound_remind"
+                android:drawablePadding="@dimen/dp_10"
+                android:text="@string/setting_sound_remind"/>
+
+            <ImageView
+                android:id="@+id/setting_sound_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_10"
+                android:src="@drawable/seletor_global_setting_switch_icon"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/view_line_padding10_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/setting_item_text_style"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/setting_information"
+                android:drawablePadding="@dimen/dp_10"
+                android:text="@string/setting_information_notification"/>
+
+            <ImageView
+                android:id="@+id/setting_notify_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_10"
+                android:src="@drawable/seletor_global_setting_switch_icon"
+                android:text="vibration"/>
+        </LinearLayout>
+
+        <include layout="@layout/view_line_padding10_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/global_setting_unit"
+                style="@style/setting_item_text_style"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/setting_unit_icon"
+                android:drawablePadding="@dimen/dp_10"
+                android:text="@string/setting_unit_title"/>
+
+
+            <TextView
+                style="@style/setting_item_text_style"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/global_setting_meter"
+                style="@style/setting_item_text_style"
+                android:layout_width="wrap_content"
+                android:text="@string/setting_unit_meters"
+                android:textColor="@color/global_setting_unit_text"/>
+
+            <ImageView
+                android:id="@+id/global_setting_unit_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:src="@drawable/seletor_global_setting_unit_type_icon"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"/>
+
+            <TextView
+                android:id="@+id/global_setting_feet"
+                style="@style/setting_item_text_style"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/dp_1"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="@string/setting_unit_feet"
+                android:textColor="@color/global_setting_unit_text"/>
+        </LinearLayout>
+
+        <include layout="@layout/view_line_padding10_layout"/>
+
+
+        <TextView
+            android:id="@+id/setting_support"
+            style="@style/setting_item_text_layout_style"
+            android:drawableLeft="@drawable/setting_support"
+            android:visibility="gone"
+            android:text="@string/setting_support"/>
+
+        <!--<include layout="@layout/view_line_padding10_layout"/>-->
+
+
+        <TextView
+            android:id="@+id/setting_about_use"
+            style="@style/setting_item_text_layout_style"
+            android:drawableLeft="@drawable/setting_info_for_use"
+            android:text="@string/setting_ifu"/>
+
+        <include layout="@layout/view_line_padding10_layout"/>
+
+        <TextView
+            android:id="@+id/setting_common_problem"
+            style="@style/setting_item_text_layout_style"
+            android:drawableLeft="@drawable/setting_commom_problem"
+            android:text="@string/setting_common_problem"/>
+
+        <include layout="@layout/view_line_padding10_layout"/>
+
+
+        <TextView
+            android:id="@+id/setting_About"
+            style="@style/setting_item_text_layout_style"
+            android:drawableLeft="@drawable/setting_info_for_use"
+            android:text="@string/setting_about"
+            android:visibility="gone"/>
+
+        <!--<include layout="@layout/view_line_padding10_layout"/>-->
+
+
+        <TextView
+            android:id="@+id/setting_contact_us"
+            style="@style/setting_item_text_layout_style"
+            android:drawableLeft="@drawable/setting_contact_us"
+            android:text="@string/setting_contact_us"
+            android:visibility="gone"/>
+
+        <!--<include layout="@layout/view_line_padding10_layout"/>-->
+
+        <TextView
+            android:id="@+id/setting_version_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="Version : 1.0.1"
+            android:textColor="@color/common_normal_text"/>
+
+        <TextView
+            android:id="@+id/setting_remove_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/seletor_common_btn_bg"
+            android:gravity="center"
+            android:text="@string/setting_remove"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16"/>
+
+    </LinearLayout>
+
+</ScrollView>

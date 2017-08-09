@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <NumberPicker
+        android:id="@+id/hours_picker"
+        style="@android:style/Theme.DeviceDefault.Dialog"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:layout_weight="1.0"
+        android:focusableInTouchMode="true"/>
+
+    <NumberPicker
+        android:id="@+id/minute_picker"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:layout_weight="1.0"
+        android:focusableInTouchMode="true"/>
+</LinearLayout>

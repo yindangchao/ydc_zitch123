@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/recommon_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
+
+    <TextView
+        android:id="@+id/recommon_open_map_app"
+        style="@style/dialog_recommon_item_style"
+        android:text="@string/recommon_menu_open"/>
+
+    <include layout="@layout/view_line_layout"/>
+
+    <TextView
+        android:id="@+id/recommon_share"
+        style="@style/dialog_recommon_item_style"
+        android:text="@string/recommon_menu_Recommend"
+        android:visibility="gone"/>
+
+    <!--<include layout="@layout/view_line_layout"/>-->
+    <!--</LinearLayout>-->
+
+    <TextView
+        android:id="@+id/recommon_cancel"
+        style="@style/dialog_recommon_item_style"
+        android:text="@string/cancel"/>
+
+</LinearLayout>

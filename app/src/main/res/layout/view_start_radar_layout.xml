@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="@dimen/compass_size"
+                android:layout_height="@dimen/compass_size"
+    android:padding="@dimen/dp_20">
+
+    <!--<ImageView-->
+        <!--android:id="@+id/view_start_radar_out_shade_bg"-->
+        <!--style="@style/view_compass_item_view_style"-->
+        <!--android:src="@drawable/compass_bg_out_shade"/>-->
+
+    <ImageView
+        android:id="@+id/view_start_radar_bg_center"
+        style="@style/view_compass_item_view_style"
+        android:layout_width="@dimen/compass_content_size"
+        android:layout_height="@dimen/compass_content_size"
+        android:visibility="gone"
+        android:src="@drawable/compass_bg_inner"/>
+
+    <ImageView
+        android:id="@+id/view_start_radar_bg_line"
+        style="@style/view_compass_item_view_style"
+        android:layout_width="@dimen/compass_content_size"
+        android:layout_height="@dimen/compass_content_size"
+        android:src="@drawable/compass_bg_line"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/view_start_radar_arrow_sector"-->
+        <!--style="@style/view_compass_item_view_style"-->
+        <!--android:src="@drawable/compass_arrow_sector_b"/>-->
+
+    <ImageView
+        android:id="@+id/view_start_radar_arrow_point"
+        style="@style/view_compass_item_view_style"
+        android:layout_width="@dimen/compass_content_size"
+        android:layout_height="@dimen/compass_content_size"
+        android:src="@drawable/compass_arrow_sector_origin_0"/>
+
+    <ImageView
+        android:id="@+id/view_start_radar_arrow_line"
+        style="@style/view_compass_item_view_style"
+        android:layout_width="@dimen/compass_content_size"
+        android:layout_height="@dimen/compass_content_size"
+        android:src="@drawable/compass_arrow_line"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/navi_compass_distance_to_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_36"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/navi_compass_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/unit_meters_upcase"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_12"/>
+
+        <TextView
+            android:id="@+id/navi_compass_locator_accuracy_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/start_desc"
+            android:textColor="@color/common_desc_text"
+            android:textSize="@dimen/font_12"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

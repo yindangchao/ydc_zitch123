@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#201d22</color>
+    <color name="colorPrimaryDark">#201d22</color>
+    <color name="colorAccent">@color/common_normal_text</color>
+
+    <!--黑色透明-->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_10">#30000000</color>
+    <color name="transparent_15">#15000000</color>
+    <color name="transparent_20">#20000000</color>
+    <color name="transparent_30">#77000000</color>
+    <color name="transparent_35">#90000000</color>
+    <color name="transparent_70">#b2000000</color>
+
+    <!--白色透明-->
+    <color name="white_transparnet">#99ffffff</color>
+    <color name="white_transparent_70">#70ffffff</color>
+    <color name="white_transparent_50">#50ffffff</color>
+    <color name="white_transparent_30">#30ffffff</color>
+
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+
+    <color name="common_green_color">#86c166</color>
+
+
+    <color name="common_bg">#1c1b1f</color>
+    <color name="common_normal_text">#808080</color>
+    <color name="common_desc_text">#7d7d7d</color>
+    <color name="common_hint_text">#999999</color>
+    <color name="common_toolbar_bg">#18161b</color>
+    <color name="common_line_color">#434343</color>
+
+    <color name="common_orgin_color">#f7db3c</color>
+    <color name="common_black_color">#333333</color>
+
+    <color name="phote_desc_menu_bg">#4b4b4b</color>
+
+</resources>

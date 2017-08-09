@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/photo_menu_tips_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:padding="@dimen/dp_5"
+        android:background="@color/phote_desc_menu_bg">
+
+        <EditText
+            android:id="@+id/photo_menu_tips_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/photo_add_tips_bg"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:hint="input tips"
+            android:textColor="@color/common_normal_text"
+            android:textSize="@dimen/font_20"/>
+
+        <TextView
+            android:id="@+id/photo_menu_tips_input_done"
+            style="@style/dialog_photo_menu_item_style"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/photo_add_tips_bg"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:textSize="@dimen/font_20"
+            android:text="@string/ok"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/photo_menu_set_tips"
+        style="@style/dialog_photo_menu_item_style"
+        android:text="@string/photo_mark_menu_title"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_half"
+        android:background="#999999"/>
+
+    <TextView
+        android:id="@+id/photo_menu_retake"
+        style="@style/dialog_photo_menu_item_style"
+        android:text="@string/photo_mark_menu_Retake"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_half"
+        android:background="#999999"/>
+    <TextView
+        android:id="@+id/photo_menu_delete"
+        style="@style/dialog_photo_menu_item_style"
+        android:text="@string/delete"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_half"
+        android:background="#999999"/>
+    <TextView
+        android:id="@+id/photo_menu_cancel"
+        style="@style/dialog_photo_menu_item_style"
+        android:text="@string/cancel"/>
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="compass_size">320dp</dimen>
+
+</resources>

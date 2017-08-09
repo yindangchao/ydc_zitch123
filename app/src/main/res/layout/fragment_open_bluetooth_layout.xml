@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ea000000"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/open_bt_turn_on"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_25"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/open_bluetooth_img"/>
+
+    <TextView
+        android:id="@+id/open_bluetooth_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/seletor_common_btn_bg"
+        android:gravity="center"
+        android:text="@string/open_bt_setting"
+        android:textColor="@color/common_black_color"
+        android:textSize="@dimen/font_20"/>
+</LinearLayout>

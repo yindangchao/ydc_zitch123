@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/compass_arrow_sector_origin_0" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_10" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_9" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_8" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_7" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_6" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_5" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_4" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_3" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_2" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_1" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_tran" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_1" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_2" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_3" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_4" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_5" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_6" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_7" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_8" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_9" android:duration="100"/>
+    <item android:drawable="@drawable/compass_arrow_sector_origin_10" android:duration="100"/>
+</animation-list>

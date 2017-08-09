@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <!--- 中文 -->
+    <string name="app_name">Fyndr</string>
+    <string name="title_activity_maps">找车神器</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="sure">确定</string>
+    <string name="nav_compass">指南针</string>
+    <string name="nav_map">地图</string>
+    <string name="nav_set_up">设置</string>
+    <string name="default_double_button_delay">300</string>
+    <string name="ble_not_supported">不支持低功耗蓝牙</string>
+    <string name="location_distance_str">距离 ±%1$d %2$s</string>
+    <string name="car_is_nearby">车在附近</string>
+    <string name="TurnOff">关闭</string>
+    <string name="Continue">继续</string>
+    <string name="alert_time_ten_mins_left">当还剩10分钟时会通知你</string>
+    <string name="alert_time_time_up_str">时间到</string>
+    <string name="park_time_has_ten_mins_left">还剩10分钟左右</string>
+    <string name="park_time_time_up">时间到</string>
+    <string name="alert_disconnected_text">定位保存成功，你需要设置停车计时闹铃吗？</string>
+    <string name="alert_locaion_fail_text">没有GPS信号，建议你拍照</string>
+    <string name="setting_park_time_title">设置停车时间提醒你</string>
+    <string name="setting_park_time_30m">30分钟</string>
+    <string name="setting_park_time_45m">45 分钟</string>
+    <string name="setting_park_time_1h">1 小时</string>
+    <string name="setting_park_time_2h">2 小时</string>
+    <string name="setting_park_time_3h">3 小时</string>
+    <string name="setting_park_time_4h">4 小时</string>
+    <string name="setting_park_time_more">更多</string>
+    <string name="setting_park_time_close">关闭</string>
+    <string name="setting_park_time_save">保存</string>
+    <string name="setting_park_time_finish_alert">关闭后设置的闹钟会被清除,确定关闭？</string>
+
+    <string-array name="setting_park_time_min_arr">
+        <item>0 分钟</item>
+        <item>5 分钟</item>
+        <item>10 分钟</item>
+        <item>15 分钟</item>
+        <item>20 分钟</item>
+        <item>25 分钟</item>
+        <item>30 分钟</item>
+        <item>35 分钟</item>
+        <item>40 分钟</item>
+        <item>45 分钟</item>
+        <item>50 分钟</item>
+        <item>55 分钟</item>
+    </string-array>
+
+    <string-array name="setting_park_time_hours_arr">
+        <item>0 小时</item>
+        <item>1 小时</item>
+        <item>2 小时</item>
+        <item>3 小时</item>
+        <item>4 小时</item>
+        <item>5 小时</item>
+        <item>6 小时</item>
+        <item>7 小时</item>
+        <item>8 小时</item>
+        <item>9 小时</item>
+        <item>10 小时</item>
+        <item>11 小时</item>
+        <item>12 小时</item>
+    </string-array>
+
+    <string name="location_succ_alert">定位成功</string>
+    <string name="location_fail_alert">定位失败</string>
+    <string name="photo_mark_menu_title">标记楼层或有用提示</string>
+    <string name="photo_mark_menu_Retake">重拍</string>
+    <string name="recommon_menu_open">使用导航软件打开</string>
+    <string name="recommon_menu_Recommend">推荐给好友</string>
+    <string name="share_title">Airdrop, 与附近人共享，如果你没看到他们，叫他们打开苹果手机上的AirDrop控制中心或打开MacBook电脑Finder中的AirDrop</string>
+    <string name="share_message">消息</string>
+    <string name="share_email">邮件</string>
+    <string name="share_more">更多</string>
+    <string name="share_copy">复制</string>
+    <string name="bind_bt_status_text">连接成功</string>
+    <string name="compass_connected_desc">已连接</string>
+    <string name="unit_meters_upcase">米</string>
+    <string name="unit_feet_upcase">英尺</string>
+    <string name="compass_photo_tips_desc">定位保存失败，\n 你可以把停车位的地址拍下</string>
+    <string name="compass_photo_take_photo_text">拍照</string>
+    <string name="compass_photo_tips">第一楼层</string>
+    <string name="compass_loaction_fail">定位失败</string>
+    <string name="compass_last_park_time">上次停车时间</string>
+    <string name="compass_park_time_less_minute">一分钟以内</string>
+    <string name="compass_action_desc">按Home键，使程序在后台运行</string>
+    <string name="fyndr_is_connect">ok...Fyndr已连接</string>
+    <string name="compass_within_text">误差 %1$d %2$s</string>
+    <string name="compass_park_time_minute_ago">%1$d 分钟以前</string>
+    <string name="compass_park_time_hours_ago">%1$d 小时 %2$d分钟之前</string>
+    <string name="found_devices_again">再试一次连接</string>
+    <string name="map_ble_connected">蓝牙连接成功</string>
+    <string name="map_ble_disconnected">连接成功</string>
+    <string name="open_bt_turn_on">打开蓝牙</string>
+    <string name="open_bt_setting">OK，我知道了</string>
+    <string name="turn_on_ble_title">请打开蓝牙</string>
+    <string name="turn_on_bel_desc">要求连接你的蓝牙找到定位设备</string>
+    <string name="turn_on_help">帮助</string>
+    <string name="ble_close_alert">蓝牙已关闭。请开启蓝牙以保证APP能正确地保存停车位置并记录行程。</string>
+    <string name="setting_global_setting">全局设置</string>
+    <string name="setting_referral">分享</string>
+    <string name="setting_support">支持</string>
+    <string name="setting_ifu">使用说明</string>
+    <string name="setting_common_problem">常见问题</string>
+    <string name="setting_common_problems">常见问题</string>
+    <string name="setting_contact_us">联系我们</string>
+    <string name="setting_remove">删除</string>
+    <string name="setting_sound_remind">声音提醒</string>
+    <string name="setting_information_notification">消息通知</string>
+    <string name="setting_unit_title">单位</string>
+    <string name="setting_unit_feet">英尺</string>
+    <string name="setting_unit_meters">米</string>
+    <string name="setting">设置</string>
+    <string name="setting_version">版本: %1$s</string>
+    <string name="setting_remove_title">删除已经连接的蓝牙定位设备</string>
+    <string name="setting_remove_content">你确定要删除已经连接过的蓝牙设备？</string>
+    <string name="contact_us_phone">+86-15920041298</string>
+    <string name="contact_us_email">service@zz-power.com</string>
+    <string name="contact_us_website">www.zz-power.com</string>
+    <string name="start_desc">距离 ±20 米</string>
+    <string name="setting_version_title">版本号v</string>
+    <string name="share_app_text">这款找车APP真的很好用，妈妈再也不用担心我的车找不到了！安卓端下载地址
+http://a.app.qq.com/o/simple.jsp?pkgname=com.vanpro.zitech
+苹果APP Store下载连接
+https://itunes.apple.com/us/app/ni-luo-he-zhao-che/id1202657876?l=zh&#064; ls=1&#064; mt=8</string>
+    <string name="common_problem_1_title">1：如果我们的找车软件无法搜索，连接到我们的蓝牙定位模块，我该怎么办？</string>
+    <string name="common_problem_1_content"> APP在搜索匹配蓝牙定位程序之前，请确保蓝牙定位车充插入汽车点烟器内，同时启动汽车，如果不能解决问题，请完全重启手机，然后再打开试着匹配。</string>
+    <string name="common_problem_2_title">2：我能使用本公司的另外的蓝牙定位模块与APP连接吗？</string>
+    <string name="common_problem_2_content">可以这样做，你首先在设置页面找到“删除”按钮，确定删除，然后重新连接搜索，连接新的蓝牙设备。</string>
+    <!-- notification -->
+    <string name="app_runing">找车神器正在运行</string>
+    <string name="alert_open_gps_title">还没有开启GPS？</string>
+    <string name="alert_open_gps_setting_btn">设置</string>
+    <!-- upgrade -->
+    <string name="upgrade_dialog_title">检测到新版本</string>
+    <string name="upgrade_dialog_info">新版更新日志。</string>
+    <string name="upgrade_dialog_btn_sure">更新</string>
+    <string name="upgrade_dialog_btn_ignore">忽略此版本</string>
+    <string name="upgrade_dialog_btn_install">安装</string>
+    <string name="upgrade_dialog_gps_title">当前为移动网络环境，更新app会消耗流量，是否继续下载？</string>
+    <string name="upgrade_notify_download_start">开始下载</string>
+    <string name="upgrade_notify_download_ing">正在下载</string>
+    <string name="upgrade_notify_download_ing_progress">正在下载</string>
+    <string name="upgrade_notify_download_done">下载完成，点击安装</string>
+    <string name="upgrade_notify_download_fail">下载新版本失败</string>
+
+    <string name="compass_connected_title">找车神器</string>
+    <string name="setting_about">Über</string>
+    <string name="useragreement_tac">AGB</string>
+    <string name="useragreement_pp">Datenschutz</string>
+    <string name="useragreement_imprint">Impressum</string>
+    <string name="setting_use_desc">使用说明</string>
+    <string name="setting_use_desc_close">关闭</string>
+
+    <string name="ble_connecting_str">正在搜索蓝牙设备</string>
+    <string name="sure_remove">确定</string>
+</resources>

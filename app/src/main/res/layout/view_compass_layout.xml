@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="@dimen/compass_content_size"
+                android:layout_height="@dimen/compass_content_size">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/view_compass_bg_line"
+        style="@style/AlertDialog.AppCompat"
+        android:src="@drawable/compass_bg_line"/>
+
+
+    <ImageView
+        android:id="@+id/view_compass_arrow_sector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/compass_arrow_sector_b"/>
+
+    <ImageView
+        android:id="@+id/view_compass_arrow_line"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/compass_arrow_line"/>
+
+
+    <ImageView
+        android:id="@+id/view_compass_arrow_point"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:src="@drawable/compass_arrow_point"/>
+
+</RelativeLayout>

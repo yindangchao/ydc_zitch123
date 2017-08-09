@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_bg"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/dp_10"
+              android:paddingRight="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/common_problem_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:drawableRight="@drawable/comom_arrow_right"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:lines="1"
+        android:paddingTop="@dimen/dp_20"
+        android:text="@string/common_problem_1_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_15"/>
+
+    <include layout="@layout/view_line_layout"/>
+
+    <TextView
+        android:id="@+id/common_problem_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:drawableRight="@drawable/comom_arrow_right"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:lines="1"
+        android:paddingTop="@dimen/dp_20"
+        android:text="@string/common_problem_2_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_15"/>
+
+    <include layout="@layout/view_line_layout"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/compass_bg_out_shade_red_1" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_11" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_10" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_9" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_8" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_7" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_6" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_5" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_4" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_3" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_2" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_3" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_4" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_5" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_6" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_7" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_8" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_9" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_10" android:duration="100"/>
+    <item android:drawable="@drawable/compass_bg_out_shade_red_11" android:duration="100"/>
+</animation-list>

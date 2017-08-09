@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+def getDate = {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd')
+    return formattedDate
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.vanpro.zitech125"
+        minSdkVersion 18
+        targetSdkVersion 22
+        versionCode 8
+        versionName "1.3.3"
+        multiDexEnabled true
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/core/java', 'src/main/java']
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-avos.pro', 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-avos.pro', 'proguard-rules.pro'
+        }
+
+        applicationVariants.all { variant ->
+
+            variant.outputs.each { output ->
+                def apk = output.outputFile;
+                def newName = apk.name.replace(".apk", "-" + defaultConfig.versionName+"-"+getDate()+ ".apk");
+                output.outputFile = new File(output.outputFile.parent, newName);
+            }
+        }
+    }
+
+
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+}

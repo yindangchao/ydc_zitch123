@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:background="#ed000000"
+              android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/time_alert_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/time_alert_alert_icon_white"/>
+
+    <TextView
+        android:id="@+id/time_alert_countdown_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textSize="@dimen/font_30"
+        android:textColor="@color/common_orgin_color"
+        android:text="New Text"/>
+
+    <TextView
+        android:id="@+id/time_alert_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_14"
+        android:visibility="gone"
+        android:text="@string/alert_time_ten_mins_left"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time_alert_btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@drawable/seletor_time_alert_btn_white"
+            android:gravity="center"
+            android:textColor="@color/time_alert_btn_close"
+            android:textSize="@dimen/font_18"
+            android:text="@string/TurnOff"/>
+
+        <TextView
+            android:id="@+id/time_alert_btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/seletor_time_alert_btn_white"
+            android:gravity="center"
+            android:textColor="@color/time_alert_btn_save"
+            android:textSize="@dimen/font_18"
+            android:text="@string/Continue"/>
+    </LinearLayout>
+</LinearLayout>

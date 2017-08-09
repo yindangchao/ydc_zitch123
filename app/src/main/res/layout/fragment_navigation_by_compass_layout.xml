@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/navigation_compass_view"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/common_bg"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:gravity="center_horizontal|bottom"
+        android:minHeight="@dimen/dp_80"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/common_hint_text"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_bg">
+
+        <com.vanpro.zitech125.ui.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="@dimen/compass_size"
+            android:layout_height="@dimen/compass_size"
+            android:layout_centerHorizontal="true">
+
+        </com.vanpro.zitech125.ui.widget.NavigationView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/navigation_view"
+            android:layout_alignEnd="@+id/navigation_view"
+            android:layout_alignStart="@+id/navigation_view"
+            android:layout_alignTop="@+id/navigation_view"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/navi_compass_show_car_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:src="@drawable/car"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/navi_compass_distance_to_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="40"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_30"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/navi_compass_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="METERS"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/navi_compass_locator_accuracy_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/location_distance_str"
+                android:textColor="@color/wallet_holo_blue_light"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/navi_compass_last_parking_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/navigation_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="Last Parking Time"
+            android:textColor="@color/common_hint_text"/>
+
+
+        <TextView
+            android:id="@+id/navi_compass_parking_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/dp_150"
+            android:gravity="center"
+            android:layout_below="@+id/found_devices_again"
+            android:layout_centerHorizontal="true"
+            android:text="Less than a minute ago"
+            android:textColor="@color/common_normal_text"/>
+
+
+        <ImageView
+            android:id="@+id/navi_compass_parking_alert_set"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/alarm_set_time"/>
+    </LinearLayout>
+
+</LinearLayout>

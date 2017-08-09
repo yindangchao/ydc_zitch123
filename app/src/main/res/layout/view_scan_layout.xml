@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="@dimen/compass_content_size"
+                android:layout_height="@dimen/compass_content_size">
+
+    <ImageView
+        android:id="@+id/view_scan_bg_line"
+        style="@style/view_compass_item_view_style"
+        android:visibility="gone"
+        android:src="@drawable/bt_scan_bg_line"/>
+
+
+    <ImageView
+        android:id="@+id/view_scan_anim"
+        style="@style/view_compass_item_view_style"
+        android:src="@drawable/bt_scan_anim"/>
+
+    <ImageView
+        android:id="@+id/view_scan_bg_bt"
+        style="@style/view_compass_item_view_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bt_scan_bg_bt"/>
+</RelativeLayout>
