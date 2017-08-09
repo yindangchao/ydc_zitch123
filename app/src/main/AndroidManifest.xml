@@ -1,51 +1,51 @@
-<manifest package="com.vanpro.zitech125"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vanpro.zitech125">
 
     <uses-feature
         android:name="android.hardware.bluetooth_le"
-        android:required="true"/>
+        android:required="true" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
-        android:required="true"/>
+        android:required="true" />
 
     <permission
         android:name="com.example.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature"/>
-    <uses-permission android:name="com.example.permission.MAPS_RECEIVE"/>
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.permission.MAPS_RECEIVE" />
 
     <application
         android:name="com.vanpro.zitech125.MyApplication"
         android:allowBackup="true"
+        android:exported="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:exported="true"
         android:theme="@style/AppTheme">
 
         <!--
@@ -58,34 +58,40 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key"/>
+            android:value="@string/google_maps_key" />
 
         <meta-data
-        android:name="com.baidu.lbsapi.API_KEY"
-        android:value="LNuMwDvtfCM2wjG0YMzwOV4UIfG1OQCi" />
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="LNuMwDvtfCM2wjG0YMzwOV4UIfG1OQCi" />
 
-        <uses-library android:name="com.google.android.maps"  android:required="false"/>
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="false" />
 
-        <meta-data android:value="57f8748de0f55ab712000927" android:name="UMENG_APPKEY"></meta-data>
-        <meta-data android:value="anzhou" android:name="UMENG_CHANNEL"/>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57f8748de0f55ab712000927"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="anzhou" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.StartActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.APP_MAPS"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.APP_MAPS" />
 
-                <data android:scheme="zitech"/>
+                <data android:scheme="zitech" />
             </intent-filter>
         </activity>
 
@@ -95,7 +101,7 @@
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/BaseTheme"/>
+            android:theme="@style/BaseTheme" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.MapviewActivity"
@@ -103,72 +109,75 @@
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/BaseTheme"/>
+            android:theme="@style/BaseTheme" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.ContactUsActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.UseDescActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.TimeAlertActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.TurnOnBLEHelpActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.GlobalSettingActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.WebviewActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.CommonProblemActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <activity
             android:name="com.vanpro.zitech125.ui.activity.CommonProblemDetailActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
-        <activity android:name="com.vanpro.zitech125.ui.activity.UseragreementActivity"
-                  android:label="@string/setting_about"
-                  android:screenOrientation="portrait"
-                  android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name="com.vanpro.zitech125.ui.activity.UseragreementActivity"
+            android:label="@string/setting_about"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <service
             android:name="com.vanpro.zitech125.bluetooth.BluetoothLeService"
-            android:enabled="true"/>
+            android:enabled="true" />
 
-        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
-        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"></service>
 
-        <receiver android:name="com.vanpro.zitech125.alert.AlarmReceiver"/>
+        <receiver android:name="com.vanpro.zitech125.alert.AlarmReceiver" />
 
-        <receiver android:name="com.vanpro.zitech125.alert.DisconnectedReceiver"/>
+        <receiver android:name="com.vanpro.zitech125.alert.DisconnectedReceiver" />
 
         <!--<receiver android:name=".ui.activity.MainActivity.GattUpdateReceiver">-->
         <!--<intent-filter android:priority="20">-->
@@ -229,5 +238,14 @@
         -->
         <!-- daemon service -->
 
+        <!--友盟 -->
+        <activity
+            android:name="com.umeng.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
     </application>
 </manifest>
