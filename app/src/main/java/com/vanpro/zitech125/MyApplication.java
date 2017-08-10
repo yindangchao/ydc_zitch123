@@ -3,6 +3,8 @@ package com.vanpro.zitech125;
 import android.app.Application;
 import android.content.Intent;
 
+import com.umeng.socialize.PlatformConfig;
+import com.umeng.socialize.UMShareAPI;
 import com.vanpro.zitech125.bluetooth.BluetoothLeService;
 import com.vanpro.zitech125.controller.BaseController;
 import com.vanpro.zitech125.util.Config;
@@ -34,7 +36,7 @@ public class MyApplication extends Application {
         //我们现在需要服务运行, 将标志位重置为 false
 //        WorkService.sShouldStopService = false;
 //        startService(new Intent(this, WorkService.class));
-
+        UMShareAPI.get(this);
     }
 
     /**

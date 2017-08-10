@@ -3,9 +3,95 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/common_bg">
-
-
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_logo"/>
     <RelativeLayout
+        android:id="@+id/layout_scan"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_logo"
+        android:layout_width="@dimen/compass_content_size"
+        android:layout_height="@dimen/compass_content_size">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bt_scan_bg_line"/>
+        <com.vanpro.zitech125.ui.widget.ScanView
+            android:id="@+id/found_devices_radar"
+            android:layout_width="@dimen/compass_content_size"
+            android:layout_height="@dimen/compass_content_size">
+
+        </com.vanpro.zitech125.ui.widget.ScanView>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/layout_scan"
+        android:orientation="vertical"
+       android:layout_marginTop="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/turn_on_ble_distance_to_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_36"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/turn_on_ble_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/turn_on_ble_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_15"/>
+
+        <TextView
+            android:id="@+id/turn_on_ble_locator_accuracy_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_3"
+            android:text="@string/turn_on_bel_desc"
+            android:textColor="@color/common_desc_text"
+            android:textSize="@dimen/font_12"/>
+
+
+        <TextView
+            android:id="@+id/turn_on_ble_locator_accuracy_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/dp_18"
+            android:text="@string/turn_on_help"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableLeft="@drawable/setting_commom_problem"
+            android:textColor="@color/common_orgin_color"
+            android:textSize="@dimen/font_17"/>
+
+        <TextView
+            android:id="@+id/turn_on_ble_locator_accuracy_help_line"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:visibility="gone"
         android:id="@+id/start_image_2"
         android:layout_width="@dimen/compass_size"
         android:layout_height="@dimen/compass_size"
@@ -29,62 +115,7 @@
             style="@style/view_compass_item_view_style"
             android:src="@drawable/compass_ble_open_bt_icon"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/dp_45">
 
-            <ImageView
-                android:id="@+id/turn_on_ble_distance_to_car"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="20"
-                android:textColor="@color/white"
-                android:textSize="@dimen/font_36"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/turn_on_ble_unit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/turn_on_ble_title"
-                android:textColor="@color/white"
-                android:textSize="@dimen/font_15"/>
-
-            <TextView
-                android:id="@+id/turn_on_ble_locator_accuracy_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/dp_3"
-                android:text="@string/turn_on_bel_desc"
-                android:textColor="@color/common_desc_text"
-                android:textSize="@dimen/font_12"/>
-
-
-            <TextView
-                android:id="@+id/turn_on_ble_locator_accuracy_help"
-                android:layout_width="@dimen/dp_50"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:paddingTop="@dimen/dp_18"
-                android:text="@string/turn_on_help"
-                android:textColor="@color/time_alert_btn_save"
-                android:textSize="@dimen/font_17"/>
-
-            <TextView
-                android:id="@+id/turn_on_ble_locator_accuracy_help_line"
-                android:layout_width="@dimen/dp_50"
-                android:layout_height="1dp"
-                android:background="@color/white"
-                android:gravity="center"/>
-
-
-        </LinearLayout>
 
 
     </RelativeLayout>

@@ -15,7 +15,6 @@
               android:background="@color/common_bg"
               android:orientation="vertical">
 
-
     <RelativeLayout
         android:id="@+id/navi_by_compass_view"
         android:layout_width="match_parent"

@@ -246,6 +246,6 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
+            android:value="@string/setting_about" />
     </application>
 </manifest>

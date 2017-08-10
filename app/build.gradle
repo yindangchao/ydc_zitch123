@@ -9,7 +9,19 @@ def getDate = {
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
+    signingConfigs {
+        debug {
+            storeFile file('fyndr.jks')
+            storePassword "296068760"
+            keyAlias "key0"
+            keyPassword "296068760"
+        }
 
+    }
+
+    dexOptions {
+        javaMaxHeapSize "3g"
+    }
     defaultConfig {
         applicationId "com.vanpro.zitech125"
         minSdkVersion 18
@@ -54,12 +66,10 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.google.android.gms:play-services:8.4.0'
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
-    compile files('libs/android-support-v4.jar')
     compile files('libs/SocialSDK_email.jar')
     compile files('libs/SocialSDK_facebook.jar')
     compile files('libs/SocialSDK_sms.jar')

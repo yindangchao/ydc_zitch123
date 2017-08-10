@@ -62,9 +62,11 @@ public class CompassView extends RelativeLayout {
             mState = state;
             switch (state) {
                 case CompassState.CONNECTED:
-                    hideArrowView();
-                    mLineBgIv.setImageResource(R.drawable.compass_checked_line_bg);
-
+//                    hideArrowView();
+//                    mLineBgIv.setImageResource(R.drawable.compass_checked_line_bg);
+                    resetRotation();
+                    showArrowView();
+                    mLineBgIv.setImageResource(R.drawable.compass_bg_line);
                     break;
 
                 case CompassState.DIRECTION:
@@ -81,7 +83,15 @@ public class CompassView extends RelativeLayout {
         directionView();
         setCompassArrow();
     }
-
+    private void resetRotation(){
+        mArrowLineIv.setImageResource(R.drawable.compass_arrow_line);
+        mArrowSectorIv.setImageResource(R.drawable.compass_arrow_sector_b);
+        mArrowSectorAd = (AnimationDrawable) mArrowSectorIv.getDrawable();
+        mArrowSectorAd.stop();
+            mArrowLineIv.setRotation(0);
+            mArrowSectorIv.setRotation(0);
+            mArrowPointIv.setRotation(0);
+    }
     private void showArrowView(){
         mArrowLineIv.setVisibility(VISIBLE);
         mArrowPointIv.setVisibility(VISIBLE);

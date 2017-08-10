@@ -3,26 +3,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/common_bg">
-
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_logo"/>
+    <RelativeLayout
+    android:id="@+id/layout_scan"
+        android:layout_below="@id/img_logo"
+    android:layout_marginTop="@dimen/dp_30"
+    android:layout_centerHorizontal="true"
+    android:layout_width="@dimen/compass_content_size"
+    android:layout_height="@dimen/compass_content_size">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bt_scan_bg_line"/>
     <com.vanpro.zitech125.ui.widget.ScanView
         android:id="@+id/found_devices_radar"
         android:layout_width="@dimen/compass_content_size"
-        android:layout_height="@dimen/compass_content_size"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_height="@dimen/compass_content_size">
 
     </com.vanpro.zitech125.ui.widget.ScanView>
-
+</RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_55"
+        android:layout_marginTop="@dimen/dp_10"
         android:padding="@dimen/dp_10"
         android:text="@string/found_devices_again"
         android:id="@+id/found_devices_again"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/found_devices_radar"/>
+        android:layout_below="@+id/layout_scan"/>
 
 </RelativeLayout>

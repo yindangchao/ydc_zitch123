@@ -109,7 +109,7 @@
     <string name="setting_contact_us">联系我们</string>
     <string name="setting_remove">删除</string>
     <string name="setting_sound_remind">声音提醒</string>
-    <string name="setting_information_notification">消息通知</string>
+    <string name="setting_information_notification">通知</string>
     <string name="setting_unit_title">单位</string>
     <string name="setting_unit_feet">英尺</string>
     <string name="setting_unit_meters">米</string>

@@ -135,7 +135,7 @@
     <string name="common_problem_2_title">2. Puis-je utiliser un autre appareil bluetooth avec l\'application ?</string>
     <string name="common_problem_2_content">Le droit de faire ça, vous avez tout d\'abord dans la page de configuration de trouver le bouton \'supprimer\' confirmation de suppression, puis à connecter, de recherche, de dispositifs de connexion Bluetooth de nouveau</string>
     <!-- notification -->
-    <string name="app_runing">Zitech pendant le fonctionnement</string>
+    <string name="app_runing">Frndr pendant le fonctionnement</string>
     <string name="alert_open_gps_title">Le GPS n\'est pas activé ?</string>
     <string name="alert_open_gps_setting_btn">Configuration</string>
     <!-- upgrade -->

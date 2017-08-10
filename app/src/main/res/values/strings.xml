@@ -114,15 +114,15 @@
     <string name="found_devices_again">Try again</string>
 
     <!-- map -->
-    <string name="map_ble_connected">Zitech is connected</string>
-    <string name="map_ble_disconnected">Zitech is disconnected</string>
+    <string name="map_ble_connected">Frndr is connected</string>
+    <string name="map_ble_disconnected">Frndr is disconnected</string>
 
     <!-- open bt -->
     <string name="open_bt_turn_on">Turn On Bluetooth</string>
     <string name="open_bt_setting">OK. I got it</string>
 
     <string name="turn_on_ble_title">Please Turn On Bluetooth</string>
-    <string name="turn_on_bel_desc">Requested to connect with your Zitech</string>
+    <string name="turn_on_bel_desc">Bluetooth is requested to connect with your Frndr to your smartphone</string>
     <string name="turn_on_help">help?</string>
     <string name="ble_close_alert">Bluetooth is off. Enable Bluetooth so the APP can save your parking location and log your miles.</string>
 
@@ -130,20 +130,20 @@
     <string name="setting_global_setting">Global setting</string>
     <string name="setting_referral">Share</string>
     <string name="setting_support">Support</string>
-    <string name="setting_ifu">Instructions for use</string>
-    <string name="setting_common_problem">Common Problem</string>
+    <string name="setting_ifu">Instructions</string>
+    <string name="setting_common_problem">Troubleshooting</string>
     <string name="setting_common_problems">Common Problems</string>
     <string name="setting_contact_us">Contact Us</string>
     <string name="setting_remove">REMOVE</string>
     <string name="setting_sound_remind">Sound Remind</string>
-    <string name="setting_information_notification">Information Notification</string>
+    <string name="setting_information_notification">Notification</string>
     <string name="setting_unit_title">Unit</string>
     <string name="setting_unit_feet">Feet</string>
     <string name="setting_unit_meters">Meters</string>
     <string name="setting">Setting</string>
 
     <string name="setting_version">Version: %1$s</string>
-    <string name="setting_remove_title">Remove connected zitech</string>
+    <string name="setting_remove_title">Remove connected Frndr</string>
     <string name="setting_remove_content">Are you sure to remove?</string>
 
     <!--- setting - contact -->
@@ -154,27 +154,27 @@
     <!-- start -->
     <string name="start_desc">Distance ±20 Meters</string>
 
-    <string name="share_app_text">Where is your car？Zitech app can really help you.</string>
+    <string name="share_app_text">Where is your car？Frndr app can really help you.</string>
 
 
-    <string name="common_problem_1_title">1.What should I do if the Zitech app is not recogni
+    <string name="common_problem_1_title">1.What should I do if the Fyndr app is not recogni
 zing the
-Zitech Car Charger?</string>
+Fyndr Car Charger?</string>
 
-    <string name="common_problem_1_content">Make sure that the Zitech Car Charger is plugged in
+    <string name="common_problem_1_content">Make sure that the Fyndr Car Charger is plugged in
 to the
 car’s power socket and that your car’s engine is
 turned on
-before  attempting to pair the Zitech Charger
+before  attempting to pair the Fyndr Charger
 with the
-ZItech app. if this doesn’t fix the issue ,please
+Fyndr app. if this doesn’t fix the issue ,please
 reboot/restart
 your phone by turning it off  completely
 and then turning it
 bank on. then try pairing again</string>
 
     <string name="common_problem_2_title">2.Can I use another Bluetooth device to match the
-Zitech?</string>
+Fyndr?</string>
 
     <string name="common_problem_2_content">Allow this to be done,find the &#60;REMOVE&#62;in the sett
 ings
@@ -184,7 +184,7 @@ Bluetooth device</string>
     <string name="setting_version_title">Version Code v</string>
 
     <!-- notification -->
-    <string name="app_runing">Zitech runing</string>
+    <string name="app_runing">Fyndr runing</string>
     <string name="alert_open_gps_title">GPS is not activated?</string>
     <string name="alert_open_gps_setting_btn">Set up</string>
 
@@ -220,7 +220,7 @@ string in this file.
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDbAxhjQ-JaPQk7OMm7utY8-VrdlfP36E4</string>
 
 
-    <string name="compass_connected_title">Zitech</string>
+    <string name="compass_connected_title">Frndr</string>
     <string name="setting_about">Über</string>
     <string name="useragreement_tac">AGB</string>
     <string name="useragreement_pp">Datenschutz</string>
