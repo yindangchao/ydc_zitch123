@@ -98,7 +98,6 @@ public class MapFragment extends BaseFragment {
         } else if (isZH()) {//根据语言来识别，如果是中文则使用百度地图，其他语言则使用Google地图
             return new BaiduMapView(getContext());
         }
-
         return new GoogleMapView(getContext());
     }
 
