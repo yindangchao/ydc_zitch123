@@ -35,8 +35,8 @@
         android:required="true" />
 
     <!--<permission-->
-        <!--android:name="com.example.permission.MAPS_RECEIVE"-->
-        <!--android:protectionLevel="signature" />-->
+    <!--android:name="com.example.permission.MAPS_RECEIVE"-->
+    <!--android:protectionLevel="signature" />-->
     <!--<uses-permission android:name="com.example.permission.MAPS_RECEIVE" />-->
     <permission
         android:name="com.zitech125.permission.MAPS_RECEIVE"
@@ -243,6 +243,7 @@
         <!-- daemon service -->
 
         <!--友盟 -->
+        <!--facebook -->
         <activity
             android:name="com.umeng.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
@@ -250,6 +251,15 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/setting_about" />
+            android:value="@string/com_facebook_dialogloginactivity_ok_button" />
+
+        <!--wechat -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
     </application>
 </manifest>

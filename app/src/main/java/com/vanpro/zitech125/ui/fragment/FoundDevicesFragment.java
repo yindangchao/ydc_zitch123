@@ -20,6 +20,8 @@ import com.vanpro.zitech125.ui.extend.BaseFragment;
 import com.vanpro.zitech125.ui.widget.ScanView;
 import com.vanpro.zitech125.util.LogUtil;
 import com.vanpro.zitech125.util.StringUtil;
+import com.vanpro.zitech125.util.umengsdk.UMengShareListener;
+import com.vanpro.zitech125.util.umengsdk.UMengUtils;
 
 /**
  * 搜索蓝牙设备
@@ -178,12 +180,34 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
         super.onDestroy();
         getActivity().unbindService(mServiceConnection);
     }
-
+    String imgUrl="http://image.tianjimedia.com/uploadImages/2016/336/38/K7665HIU7L5F.jpg";
     @Override
     public void onClick(View v) {
         if (mScanning)
             return;
         else
             scanLeDevice(true);
+//            UMengUtils.share(getActivity(),"fdfsfdsfs","fdfsfdsfs",imgUrl,imgUrl,new UMengShareListener(){
+//
+//                @Override
+//                public void onStart(UMengUtils.SHARE_PLATFORM platform) {
+//
+//                }
+//
+//                @Override
+//                public void onResult(UMengUtils.SHARE_PLATFORM platform) {
+//
+//                }
+//
+//                @Override
+//                public void onError(UMengUtils.SHARE_PLATFORM platform, Throwable throwable) {
+//
+//                }
+//
+//                @Override
+//                public void onCancel(UMengUtils.SHARE_PLATFORM platform) {
+//
+//                }
+//            });
     }
 }

@@ -17,4 +17,8 @@ public class Constants {
      */
     public static final int NEARBYSIZE = 5;
 
+    //统一使用旧的key
+    public static final String WECHAT_APP_ID = "wx7ac3f169c7d39e56";
+    public static final String WECHAT_APP_KEY = "4007cad9d97926db586c77c52c0c335d";
+
 }

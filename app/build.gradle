@@ -10,13 +10,12 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
     signingConfigs {
-        debug {
+        release {
             storeFile file('fyndr.jks')
             storePassword "296068760"
             keyAlias "key0"
             keyPassword "296068760"
         }
-
     }
 
     dexOptions {
@@ -41,11 +40,15 @@ android {
         debug {
             minifyEnabled false
             shrinkResources false
+            debuggable true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-avos.pro', 'proguard-rules.pro'
         }
         release {
             minifyEnabled true
             shrinkResources true
+            debuggable true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-avos.pro', 'proguard-rules.pro'
         }
 
@@ -53,7 +56,7 @@ android {
 
             variant.outputs.each { output ->
                 def apk = output.outputFile;
-                def newName = apk.name.replace(".apk", "-" + defaultConfig.versionName+"-"+getDate()+ ".apk");
+                def newName = apk.name.replace(".apk", "-" + defaultConfig.versionName + "-" + getDate() + ".apk");
                 output.outputFile = new File(output.outputFile.parent, newName);
             }
         }
@@ -78,4 +81,6 @@ dependencies {
     compile files('libs/umeng_social_api.jar')
     compile files('libs/umeng_social_net.jar')
     compile files('libs/umeng_social_tool.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/umeng_shareboard_widget.jar')
 }

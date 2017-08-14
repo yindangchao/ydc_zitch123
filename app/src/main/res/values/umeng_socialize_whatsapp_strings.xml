@@ -1,4 +1,5 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
 
     <string name="whatsapp_showword">WhatsApp</string>
     <string name="whatsapp_no_client">未安装有WhatsApp客户端</string>
