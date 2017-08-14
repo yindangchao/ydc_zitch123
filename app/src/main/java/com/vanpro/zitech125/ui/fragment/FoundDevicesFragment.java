@@ -8,6 +8,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.IBinder;
 import android.view.View;
@@ -23,9 +25,12 @@ import com.vanpro.zitech125.util.StringUtil;
 import com.vanpro.zitech125.util.umengsdk.UMengShareListener;
 import com.vanpro.zitech125.util.umengsdk.UMengUtils;
 
+import java.util.List;
+import java.util.Locale;
+
 /**
  * 搜索蓝牙设备
- * <p>
+ * <p/>
  * Created by Jinsen on 16/4/8.
  */
 public class FoundDevicesFragment extends BaseFragment implements View.OnClickListener {
@@ -153,7 +158,7 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
     private BluetoothAdapter.LeScanCallback mLeScanCallback = new BluetoothAdapter.LeScanCallback() {
         @Override
         public void onLeScan(final BluetoothDevice device, int rssi, byte[] scanRecord) {
-            if(getActivity() == null)
+            if (getActivity() == null)
                 return;
             getActivity().runOnUiThread(new Runnable() {
                 @Override
@@ -180,34 +185,72 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
         super.onDestroy();
         getActivity().unbindService(mServiceConnection);
     }
-    String imgUrl="http://image.tianjimedia.com/uploadImages/2016/336/38/K7665HIU7L5F.jpg";
+
+    String imgUrl = "http://image.tianjimedia.com/uploadImages/2016/336/38/K7665HIU7L5F.jpg";
+
     @Override
     public void onClick(View v) {
         if (mScanning)
             return;
         else
             scanLeDevice(true);
-//            UMengUtils.share(getActivity(),"fdfsfdsfs","fdfsfdsfs",imgUrl,imgUrl,new UMengShareListener(){
-//
-//                @Override
-//                public void onStart(UMengUtils.SHARE_PLATFORM platform) {
-//
-//                }
-//
-//                @Override
-//                public void onResult(UMengUtils.SHARE_PLATFORM platform) {
-//
-//                }
-//
-//                @Override
-//                public void onError(UMengUtils.SHARE_PLATFORM platform, Throwable throwable) {
-//
-//                }
-//
-//                @Override
-//                public void onCancel(UMengUtils.SHARE_PLATFORM platform) {
-//
-//                }
-//            });
+
+    }
+
+    private void shareUmplatforms() {
+        UMengUtils.share(getActivity(), "fdfsfdsfs", "fdfsfdsfs", imgUrl, imgUrl, new UMengShareListener() {
+
+            @Override
+            public void onStart(UMengUtils.SHARE_PLATFORM platform) {
+
+            }
+
+            @Override
+            public void onResult(UMengUtils.SHARE_PLATFORM platform) {
+
+            }
+
+            @Override
+            public void onError(UMengUtils.SHARE_PLATFORM platform, Throwable throwable) {
+
+            }
+
+            @Override
+            public void onCancel(UMengUtils.SHARE_PLATFORM platform) {
+
+            }
+        });
+    }
+
+    private void shareViber() {
+        boolean found = false;
+        Intent share = new Intent(android.content.Intent.ACTION_SEND);
+        share.setType("text/plain");
+
+        // gets the list of intents that can be loaded.
+        List<ResolveInfo> resInfo = getContext().getPackageManager()
+                .queryIntentActivities(share, 0);
+        if (!resInfo.isEmpty()) {
+            for (ResolveInfo info : resInfo) {
+                if (info.activityInfo.packageName.toLowerCase(
+                        Locale.getDefault()).contains("com.viber.voip")
+                        || info.activityInfo.name.toLowerCase(
+                        Locale.getDefault()).contains("com.viber.voip")) {
+                    share.putExtra(Intent.EXTRA_TEXT, "Your text to share");
+                    share.setPackage(info.activityInfo.packageName);
+                    found = true;
+                    startActivity(Intent.createChooser(share, "Select"));
+                    break;
+                }
+            }
+            if (!found) {
+
+                Uri marketUri = Uri.parse("market://details?id="
+                        + "com.viber.voip");
+                Intent marketIntent = new Intent(Intent.ACTION_VIEW, marketUri);
+                startActivity(marketIntent);
+            }
+
+        }
     }
 }
