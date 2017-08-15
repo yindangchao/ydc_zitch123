@@ -85,8 +85,6 @@ public final class UMengUtils {
     public static final SHARE_MEDIA[] displaylist = new SHARE_MEDIA[]
             {
                     SHARE_MEDIA.EMAIL, SHARE_MEDIA.SMS,
-                    SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE,
-                    SHARE_MEDIA.FACEBOOK, SHARE_MEDIA.FACEBOOK_MESSAGER,
                     SHARE_MEDIA.WHATSAPP
             };
 

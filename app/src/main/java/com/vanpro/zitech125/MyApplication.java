@@ -39,7 +39,7 @@ public class MyApplication extends Application {
 //        WorkService.sShouldStopService = false;
 //        startService(new Intent(this, WorkService.class));
         UMShareAPI.get(this);
-        initUmeng();
+//        initUmeng();
     }
 
     private void initUmeng() {

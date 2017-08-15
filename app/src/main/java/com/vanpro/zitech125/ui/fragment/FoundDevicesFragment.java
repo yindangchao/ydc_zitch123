@@ -194,11 +194,10 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
             return;
         else
             scanLeDevice(true);
-
     }
 
     private void shareUmplatforms() {
-        UMengUtils.share(getActivity(), "fdfsfdsfs", "fdfsfdsfs", imgUrl, imgUrl, new UMengShareListener() {
+        UMengUtils.share(getActivity(), "", "", imgUrl, imgUrl, new UMengShareListener() {
 
             @Override
             public void onStart(UMengUtils.SHARE_PLATFORM platform) {
