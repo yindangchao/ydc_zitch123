@@ -305,4 +305,43 @@ public final class UMengUtils {
         }).open();
 
     }
+
+    private static void shareText(Activity context, String text, final UMengShareListener listener) {
+        new ShareAction(context)
+                .setDisplayList(displaylist)
+                .withText(text).setCallback(new UMShareListener() {
+            @Override
+            public void onStart(SHARE_MEDIA share_media) {
+                if (listener != null) {
+                    SHARE_PLATFORM platform = convertPlatform(share_media);
+                    listener.onStart(platform);
+                }
+            }
+
+            @Override
+            public void onResult(SHARE_MEDIA share_media) {
+                if (listener != null) {
+                    SHARE_PLATFORM platform = convertPlatform(share_media);
+                    listener.onResult(platform);
+                }
+            }
+
+            @Override
+            public void onError(SHARE_MEDIA share_media, Throwable throwable) {
+                if (listener != null) {
+                    SHARE_PLATFORM platform = convertPlatform(share_media);
+                    listener.onError(platform, throwable);
+                }
+            }
+
+            @Override
+            public void onCancel(SHARE_MEDIA share_media) {
+                if (listener != null) {
+                    SHARE_PLATFORM platform = convertPlatform(share_media);
+                    listener.onCancel(platform);
+                }
+            }
+        }).open();
+
+    }
 }
