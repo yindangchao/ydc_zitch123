@@ -57,6 +57,8 @@ import java.util.HashMap;
 
 import de.greenrobot.event.EventBus;
 import com.vanpro.zitech125.util.StringUtil;
+import com.vanpro.zitech125.util.umengsdk.UMengShareListener;
+import com.vanpro.zitech125.util.umengsdk.UMengUtils;
 
 /**
  * Created by Jinsen on 16/12
@@ -319,10 +321,27 @@ public class MainActivity extends FragmentActivity {
         mSharedBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new RecommonDialog(MainActivity.this).show();
+                String url="";
+                BaseFragment baseFragment = mTabFragment.get(TAB_MAP);
+                if (baseFragment!=null){
+                    MapFragment mapFragment   =   (MapFragment)baseFragment;
+                    if (mapFragment!=null){
+                        ZLocation location=  mapFragment.getmCurrentLocation();
+                        int type=     location.getType();
+//                    if (type == ZLocation.GPS){
+                        url = "http://maps.google.com/maps?q=Dan@"+location.getLongitude()+","+location.getLatitude();
+//                    }else if (type == ZLocation.BD){
+//                        url = "http://api.map.baidu.com/marker?location="+location.getBDLocation().getLongitude()+","+location.getBDLocation().getLatitude()+"&title=MyLocation&output=html";
+//                    }
+                    }
+                }
+                    new RecommonDialog(MainActivity.this,url).show();
+
+
             }
         });
     }
+
 
     private void initFragment() {
         mIsOpenGps = true;

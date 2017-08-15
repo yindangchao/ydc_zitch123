@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.media.ExifInterface;
 import android.os.Handler;
 import android.os.Message;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.vanpro.zitech125.R;
@@ -77,13 +79,32 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
     ParkingTimeAlertDialog mParkingTimeAlertDialog = null;
     PhotoSettingDialog mPhotoSettingDialog = null;
 
+    private LinearLayout linOnlyMinute;
+    private TextView tvOnlyMinute;
+    private Typeface typeface;
+
     @Override
     protected int getLayoutResourceId() {
         return R.layout.fragment_compass_layout;
     }
-
+    private void initTypeFace(){
+     typeface = Typeface.createFromAsset(getContext().getAssets(),"fonts/MarkOT-Bold.ttf");
+        mPhotoTipsTv.setTypeface(typeface);
+        mTakePhotoTv.setTypeface(typeface);
+        mPoolGpsTv.setTypeface(typeface);
+        mTakePhotoDescTv.setTypeface(typeface);
+        mDistanceFromCarTv.setTypeface(typeface);
+        mUnitTv.setTypeface(typeface);
+        mLocatorAccuracyTv.setTypeface(typeface);
+        mParkLongTv.setTypeface(typeface);
+        mAlertTimeCountdownTv.setTypeface(typeface);
+        mConnectedState1View.setTypeface(typeface);
+        mConnectedState2View.setTypeface(typeface);
+        mDescTv.setTypeface(typeface);
+    }
     @Override
     protected void initView() {
+
         mCompassView = findViewById(R.id.navi_by_compass_view);
         mPhotoView = findViewById(R.id.navi_by_photo_view);
         mConnectedIv = (ImageView) findViewById(R.id.img_has_connected);
@@ -107,7 +128,11 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         mSetAlertIv = (ImageView) findViewById(R.id.navi_compass_parking_alert_set);
         mAlertTimeCountdownTv = (TextView) findViewById(R.id.navi_compass_parking_alert_countdown);
 
+        linOnlyMinute = (LinearLayout) findViewById(R.id.lin_only_minute);
+        tvOnlyMinute = (TextView) findViewById(R.id.tv_minute);
+
         mDescTv = (TextView) findViewById(R.id.navi_compass_last_parking_time);
+        initTypeFace();
     }
 
     @Override
@@ -153,6 +178,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         mCompass.connected();
         mConnectedState1View.setVisibility(View.VISIBLE);
         mConnectedState2View.setVisibility(View.GONE);
+        mConnectedState1View.setTextColor(getResources().getColor(R.color.white));
         mConnectedState1View.setText(R.string.ble_connecting_str);
         mConnectedState1View.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
 
@@ -179,6 +205,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         mConnectedState1View.setVisibility(View.GONE);
         mConnectedState2View.setVisibility(View.GONE);
         mConnectedState1View.setText(R.string.compass_connected_title);
+        mConnectedState1View.setTextColor(getResources().getColor(R.color.white));
         mConnectedState2View.setText(R.string.compass_connected_desc);
         mConnectedState1View.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
         mConnectedState2View.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17);
@@ -202,6 +229,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         isConnected = false;
         mConnectedState1View.setVisibility(View.GONE);
         mConnectedState2View.setVisibility(View.GONE);
+        mConnectedState1View.setTextColor(getResources().getColor(R.color.white));
         mConnectedIv.setVisibility(View.GONE);
         mSetAlertIv.setVisibility(mAlertTimeCountdownTv.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
         mParkLongTv.setVisibility(View.VISIBLE);
@@ -316,6 +344,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
             mConnectedState1View.setVisibility(View.VISIBLE);
             mConnectedState2View.setVisibility(View.VISIBLE);
             mConnectedState1View.setText(R.string.car_is_nearby);
+            mConnectedState1View.setTextColor(getResources().getColor(R.color.common_orgin_color));
 
             String unit = isMeterUnitType ? getString(R.string.setting_unit_meters) : getString(R.string.setting_unit_feet);
             int len = isMeterUnitType ? 5 : (int) (5 * UnitType.METER_TO_FEET);
@@ -327,7 +356,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         } else {
             mConnectedState1View.setVisibility(View.GONE);
             mConnectedState2View.setVisibility(View.GONE);
-
+            mConnectedState1View.setTextColor(getResources().getColor(R.color.white));
             mCompass.direction();
             mCompass.setDistance(distance);
 
@@ -489,11 +518,11 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         mAlertTimeCountdownTv.setText(time);
 
         if (mAlertCountdownTime > 10 * 60) {
-            mAlertTimeCountdownTv.setBackgroundResource(R.drawable.compass_alert_cd_bg_1);
+//            mAlertTimeCountdownTv.setBackgroundResource(R.drawable.compass_alert_cd_bg_1);
             mAlertTimeCountdownTv.setTextColor(getResources().getColor(R.color.common_orgin_color));
         } else {
-            mAlertTimeCountdownTv.setBackgroundResource(R.drawable.compass_alert_cd_bg_red);
-            mAlertTimeCountdownTv.setTextColor(getResources().getColor(R.color.white));
+//            mAlertTimeCountdownTv.setBackgroundResource(R.drawable.compass_alert_cd_bg_red);
+            mAlertTimeCountdownTv.setTextColor(getResources().getColor(R.color.common_orgin_color));
         }
     }
 

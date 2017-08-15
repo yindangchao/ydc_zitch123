@@ -45,7 +45,14 @@ public class CommonProblemDetailActivity extends CustomToolbarActivity {
                 mTitleTv.setText(R.string.common_problem_2_title);
                 mContentTv.setText(R.string.common_problem_2_content);
                 break;
-
+            case 3 :
+                mTitleTv.setText(R.string.common_problem_3_title);
+                mContentTv.setText(R.string.common_problem_3_content);
+                break;
+            case 4:
+                mTitleTv.setText(R.string.common_problem_4_title);
+                mContentTv.setText(R.string.common_problem_4_content);
+                break;
         }
     }
 

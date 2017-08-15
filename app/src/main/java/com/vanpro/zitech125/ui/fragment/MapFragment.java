@@ -87,6 +87,14 @@ public class MapFragment extends BaseFragment {
         }
     }
 
+    public ZLocation getmCarLocation() {
+        return mCarLocation;
+    }
+
+    public ZLocation getmCurrentLocation() {
+        return mCurrentLocation;
+    }
+
     //初始化选择地图类型
     private BaseMapView initMapView() {
         int mapType = AppDataManager.getInstance().getInt(AppDataManager.KEY.MAP_SELECTED_ID);

@@ -7,6 +7,7 @@
     <string name="cancel">Cancel</string>
     <string name="delete">Delete</string>
     <string name="sure">Sure</string>
+    <string name="disconnect">Disconnect</string>
 
     <!--- main tab -->
     <string name="nav_compass">Compass</string>
@@ -19,12 +20,12 @@
 
     <string name="location_distance_str">Distance ±%1$d %2$s</string>
 
-    <string name="car_is_nearby">Your car is nearby</string>
+    <string name="car_is_nearby">Your Car is nearby</string>
 
     <!--- time alert -->
     <string name="TurnOff">Turn off</string>
     <string name="Continue">Continue</string>
-    <string name="alert_time_ten_mins_left">You will be notified when you have 10 mins left</string>
+    <string name="alert_time_ten_mins_left">You\'ll be notified when\n you have 10 mins left</string>
     <string name="alert_time_time_up_str">Time is up at </string>
     <string name="park_time_has_ten_mins_left">ten minutes left</string>
     <string name="park_time_time_up">Time is up</string>
@@ -43,8 +44,8 @@
     <string name="setting_park_time_more">more</string>
     <string name="setting_park_time_close">close</string>
     <string name="setting_park_time_save">save</string>
-    <string name="setting_park_time_finish_alert">The alarm will be removed after closure, are you sure?</string>
-
+    <string name="setting_park_time_finish_alert">Are you sure you want to turn it off?</string>
+    <string name="setting_park_turn_off_sure">Turn off</string>
     <string name="location_succ_alert">Location success</string>
     <string name="location_fail_alert">Location failed </string>
 
@@ -96,34 +97,36 @@
     <string name="bind_bt_status_text">connected successful</string>
 
     <!-- compass -->
-    <string name="compass_connected_desc">is connected</string>
+    <string name="compass_connected_desc">is Connected</string>
     <string name="unit_meters_upcase">METERS</string>
     <string name="unit_feet_upcase">FEET</string>
-    <string name="compass_photo_tips_desc">Failed to save location \n take a photo of your whereabouts</string>
+    <string name="compass_photo_tips_desc">Unable to find your location\nTake a photo of your surroundings \nto help find your parked car later on.</string>
     <string name="compass_photo_take_photo_text">Take a photo</string>
     <string name="compass_photo_tips">First fool</string>
-    <string name="compass_loaction_fail">Location Failed</string>
+    <string name="compass_loaction_fail">Unable to Find Location</string>
     <string name="compass_last_park_time">Last Parking Time</string>
     <string name="compass_park_time_less_minute">Less than a minute ago</string>
     <string name="compass_action_desc">Press home button to close the app\nleaving it working in the background</string>
-    <string name="fyndr_is_connect">ok...Fyndr is Connect</string>
+    <string name="fyndr_is_connect">Ok...Fyndr is Connected</string>
     <string name="compass_within_text">Within %1$d %2$s</string>
     <string name="compass_park_time_minute_ago">%1$d mins ago</string>
     <string name="compass_park_time_hours_ago">%1$d hours %2$d mins ago</string>
 
-    <string name="found_devices_again">Try again</string>
+    <string name="found_devices_again">Connecting..</string>
+    <string name="found_devices_scaning">Scanning..</string>
 
     <!-- map -->
-    <string name="map_ble_connected">Frndr is connected</string>
-    <string name="map_ble_disconnected">Frndr is disconnected</string>
+    <string name="map_ble_connected">Fyndr is Connected</string>
+    <string name="map_ble_disconnected">Fyndr is disconnected</string>
 
     <!-- open bt -->
     <string name="open_bt_turn_on">Turn On Bluetooth</string>
     <string name="open_bt_setting">OK. I got it</string>
+    <string name="open_bt_yellow"><Data><![CDATA[Please Turn <font color="#f7db3c">On</font> Bluetooth]]></Data></string>
 
     <string name="turn_on_ble_title">Please Turn On Bluetooth</string>
-    <string name="turn_on_bel_desc">Bluetooth is requested to connect with your Frndr to your smartphone</string>
-    <string name="turn_on_help">help?</string>
+    <string name="turn_on_bel_desc">Bluetooth is required to connect \n Fyndr to your smartphone.</string>
+    <string name="turn_on_help">Help?</string>
     <string name="ble_close_alert">Bluetooth is off. Enable Bluetooth so the APP can save your parking location and log your miles.</string>
 
     <!--- set up  -->
@@ -132,19 +135,19 @@
     <string name="setting_support">Support</string>
     <string name="setting_ifu">Instructions</string>
     <string name="setting_common_problem">Troubleshooting</string>
-    <string name="setting_common_problems">Common Problems</string>
+    <string name="setting_common_problems">Troubleshooting</string>
     <string name="setting_contact_us">Contact Us</string>
-    <string name="setting_remove">REMOVE</string>
-    <string name="setting_sound_remind">Sound Remind</string>
-    <string name="setting_information_notification">Notification</string>
+    <string name="setting_remove">DISCONNECT</string>
+    <string name="setting_sound_remind">Sound Alerts</string>
+    <string name="setting_information_notification">Information Notification</string>
     <string name="setting_unit_title">Unit</string>
     <string name="setting_unit_feet">Feet</string>
     <string name="setting_unit_meters">Meters</string>
     <string name="setting">Setting</string>
 
     <string name="setting_version">Version: %1$s</string>
-    <string name="setting_remove_title">Remove connected Frndr</string>
-    <string name="setting_remove_content">Are you sure to remove?</string>
+    <string name="setting_remove_title">Remove connected Fyndr</string>
+    <string name="setting_remove_content">Are you sure you want to disconnect connection to Fyndr?</string>
 
     <!--- setting - contact -->
     <string name="contact_us_phone">+86-15920041298</string>
@@ -154,39 +157,29 @@
     <!-- start -->
     <string name="start_desc">Distance ±20 Meters</string>
 
-    <string name="share_app_text">Where is your car？Frndr app can really help you.</string>
+    <string name="share_app_text">Where is your car？Fyndr app can really help you.</string>
 
 
-    <string name="common_problem_1_title">1.What should I do if the Fyndr app is not recogni
-zing the
-Fyndr Car Charger?</string>
+    <string name="common_problem_1_title">1.   What should I do if the Fyndr charger is not pairing with the Fyndr app?</string>
 
-    <string name="common_problem_1_content">Make sure that the Fyndr Car Charger is plugged in
-to the
-car’s power socket and that your car’s engine is
-turned on
-before  attempting to pair the Fyndr Charger
-with the
-Fyndr app. if this doesn’t fix the issue ,please
-reboot/restart
-your phone by turning it off  completely
-and then turning it
-bank on. then try pairing again</string>
+    <string name="common_problem_1_content">Make sure that the Fyndr car charger is plugged into the car\'s 12V power socket and that your car engine is turned on before attempting to pair the Fyndr car charger with the Fyndr app. If this doesn\'t resolve the issue, please reboot restart your phone by turning it off completely and then turning it back on, then try to pair again.</string>
 
-    <string name="common_problem_2_title">2.Can I use another Bluetooth device to match the
-Fyndr?</string>
+    <string name="common_problem_2_title">2.  Can I leave Fyndr charger in my car or do I need to take it with me for it to locate my parked car?</string>
 
-    <string name="common_problem_2_content">Allow this to be done,find the &#60;REMOVE&#62;in the sett
-ings
-page ,click OK,and then reconnect the  new
-Bluetooth device</string>
+    <string name="common_problem_2_content"> Can I leave Fyndr charger in my car or do I need to take it with me for it to locate my parked car?
+
+You can leave your Fyndr in your 12V power socket – you do not have to take it with you. When you have parked your car and have turned off your engine, Fyndr will automatically pin your location using the GPS on your phone. </string>
+    <string name="common_problem_3_title">3.  What happens if Fyndr is directing me to my parked car location and it is not there?  </string>
+    <string name="common_problem_4_title">4. What happens if I park my car and Fyndr cannot locate my location to pin?</string>
+    <string name="common_problem_3_content">Fyndr will always take you to the location where your vehicle was last parked. If Fyndr is directing you to a location and your parked par is not located in this location, it may indicate your vehicle has been moved from this location. If your vehicle is not located where Fyndr has directed you, someone may have moved it.</string>
+    <string name="common_problem_4_content">Fyndr will detect the location of your parked car with GPS access. If you are parked indoors or in an underground / multi-level cart park Fyndr may lose a direct line to GPS satellite. In this instance Fyndr will suggest you take an image of your surroundings using your smart phone camera to help find the location of your parked car later on.</string>
 
     <string name="setting_version_title">Version Code v</string>
 
     <!-- notification -->
     <string name="app_runing">Fyndr runing</string>
-    <string name="alert_open_gps_title">GPS is not activated?</string>
-    <string name="alert_open_gps_setting_btn">Set up</string>
+    <string name="alert_open_gps_title">GPS is not enabled?</string>
+    <string name="alert_open_gps_setting_btn">Go to Set Up</string>
 
     <!-- upgrade -->
     <string name="upgrade_dialog_title">new version available</string>
@@ -220,7 +213,7 @@ string in this file.
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCFBXZgWCvJfKI2GoD5WYFs6KgonivtkZY</string>
 
 
-    <string name="compass_connected_title">Frndr</string>
+    <string name="compass_connected_title">Fyndr</string>
     <string name="setting_about">Über</string>
     <string name="useragreement_tac">AGB</string>
     <string name="useragreement_pp">Datenschutz</string>

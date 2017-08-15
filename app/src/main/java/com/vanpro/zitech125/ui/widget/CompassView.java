@@ -77,6 +77,9 @@ public class CompassView extends RelativeLayout {
                 case CompassState.NEARBY:
                     hideArrowView();
                     mLineBgIv.setImageResource(R.drawable.compass_checked_line_bg);
+//                    mLineBgIv.setImageResource(R.drawable.compass_bg_line);
+//                    resetRotation();
+//                    showArrowView();
                     break;
             }
         }
@@ -91,6 +94,7 @@ public class CompassView extends RelativeLayout {
             mArrowLineIv.setRotation(0);
             mArrowSectorIv.setRotation(0);
             mArrowPointIv.setRotation(0);
+        mArrowPointIv.setVisibility(GONE);
     }
     private void showArrowView(){
         mArrowLineIv.setVisibility(VISIBLE);

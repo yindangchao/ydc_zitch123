@@ -30,6 +30,8 @@ public class CommonProblemActivity extends CustomToolbarActivity {
     public void setLisetener() {
         findViewById(R.id.common_problem_1).setOnClickListener(this);
         findViewById(R.id.common_problem_2).setOnClickListener(this);
+        findViewById(R.id.common_problem_3).setOnClickListener(this);
+        findViewById(R.id.common_problem_4).setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +45,12 @@ public class CommonProblemActivity extends CustomToolbarActivity {
 
             case R.id.common_problem_2:
                 problemDetail(2);
+                break;
+            case R.id.common_problem_3:
+                problemDetail(3);
+                break;
+            case R.id.common_problem_4:
+                problemDetail(4);
                 break;
         }
     }

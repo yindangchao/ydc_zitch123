@@ -116,12 +116,14 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
                     mScanning = false;
                     mBluetoothAdapter.stopLeScan(mLeScanCallback);
                     mRadarView.stop();
-                    mTryAgainView.setVisibility(View.VISIBLE);
+//                    mTryAgainView.setVisibility(View.VISIBLE);
+                    mTryAgainView.setText(R.string.found_devices_again);
                 }
             }, SCAN_PERIOD);
             mRadarView.start();
             mScanning = true;
-            mTryAgainView.setVisibility(View.GONE);
+//            mTryAgainView.setVisibility(View.GONE);
+            mTryAgainView.setText(R.string.found_devices_scaning);
             mBluetoothAdapter.startLeScan(mLeScanCallback);
 //            mBluetoothAdapter.startLeScan(new UUID[]{UUID.fromString(UUIDSTR)}, mLeScanCallback);
         } else {

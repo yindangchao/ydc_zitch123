@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.vanpro.zitech125.R;
 import com.vanpro.zitech125.ui.adapter.CommonPageAdapter;
+import com.vanpro.zitech125.ui.extend.BaseActivity;
 import com.vanpro.zitech125.ui.extend.CustomToolbarActivity;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * Created by Jinsen on 16/7/8.
  */
-public class UseDescActivity extends CustomToolbarActivity{
+public class UseDescActivity extends BaseActivity{
 
     private ViewPager viewPager;
     private List<View> imgsList;
@@ -41,7 +42,8 @@ public class UseDescActivity extends CustomToolbarActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_use_desc_layout);
-        setTitle(R.string.setting_use_desc);
+//        setTitle(R.string.setting_use_desc);
+//        getTitleBar().setVisibility(View.GONE);
     }
 
     @Override
@@ -71,7 +73,12 @@ public class UseDescActivity extends CustomToolbarActivity{
         }
         //给最后一张图片添加点击事件
         //点击该图片后跳转到下一个界面
-        imgsList.get(imgsList.size() - 1).setOnClickListener(this);
+        imgsList.get(imgsList.size() - 1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         mOkBtn = (TextView) findViewById(R.id.use_desc_ok_btn);
         mOkBtn.setVisibility(View.GONE);
@@ -105,7 +112,7 @@ public class UseDescActivity extends CustomToolbarActivity{
                 }
 
                 if(isLastPager) {
-                    mOkBtn.setVisibility(View.VISIBLE);
+                    mOkBtn.setVisibility(View.GONE);
                     mOkBtn.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG); //下划线
                     mOkBtn.getPaint().setAntiAlias(true);//抗锯齿
                 }else

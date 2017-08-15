@@ -1,5 +1,6 @@
 package com.vanpro.zitech125.ui.dialog;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -16,27 +17,31 @@ import com.vanpro.zitech125.location.ZLocation;
 import com.vanpro.zitech125.manage.StatusManage;
 import com.vanpro.zitech125.present.LocationMgr;
 import com.vanpro.zitech125.util.AndroidUtils;
+import com.vanpro.zitech125.util.umengsdk.UMengShareListener;
+import com.vanpro.zitech125.util.umengsdk.UMengUtils;
 
 /**
  * Created by Jinsen on 16/7/6.
  */
 public class RecommonDialog extends Dialog implements View.OnClickListener {
 
-    Context mContext;
+    Activity mContext;
 
     View mOpenMapApp = null;
+    View mOpenShare = null;
+    private String shareUrl ;
 
-    public RecommonDialog(Context context) {
+    public RecommonDialog(Activity context, String shareUrl) {
         this(context, R.style.dialogButtom);
+        this.shareUrl = shareUrl;
     }
-
-    public RecommonDialog(Context context, int themeResId) {
+    public RecommonDialog(Activity context, int themeResId) {
         super(context, themeResId);
         initDialog(context);
         EventBus.getDefault().register(this);
     }
 
-    private void initDialog(Context context) {
+    private void initDialog(Activity context) {
         mContext = context;
         setContentView(R.layout.dialog_recommon_layout);
         initView();
@@ -47,6 +52,7 @@ public class RecommonDialog extends Dialog implements View.OnClickListener {
 
     private void initView() {
         mOpenMapApp = findViewById(R.id.recommon_open_map_app);
+        mOpenShare =findViewById(R.id.recommon_share);
         setOpenMapAppViewState();
     }
 
@@ -65,7 +71,9 @@ public class RecommonDialog extends Dialog implements View.OnClickListener {
                 break;
 
             case R.id.recommon_share:
-                shareDialog();
+//                shareDialog();
+        shareUmplatforms();
+                dismiss();
                 break;
 
             case R.id.recommon_cancel:
@@ -73,7 +81,30 @@ public class RecommonDialog extends Dialog implements View.OnClickListener {
                 break;
         }
     }
+    private void shareUmplatforms() {
+        UMengUtils.share(mContext, "i'm here", "i'm here", shareUrl, R.drawable.logo, new UMengShareListener() {
 
+            @Override
+            public void onStart(UMengUtils.SHARE_PLATFORM platform) {
+
+            }
+
+            @Override
+            public void onResult(UMengUtils.SHARE_PLATFORM platform) {
+
+            }
+
+            @Override
+            public void onError(UMengUtils.SHARE_PLATFORM platform, Throwable throwable) {
+
+            }
+
+            @Override
+            public void onCancel(UMengUtils.SHARE_PLATFORM platform) {
+
+            }
+        });
+    }
     private void shareDialog() {
         dismiss();
         ShareDialog shareDialog = new ShareDialog(mContext);
@@ -147,8 +178,10 @@ public class RecommonDialog extends Dialog implements View.OnClickListener {
             return;
         if(StatusManage.getInstance().getStatus() == StatusManage.Status.LOCATION_SUCC){
             mOpenMapApp.setVisibility(View.VISIBLE);
+            mOpenShare.setVisibility(View.VISIBLE);
         }else{
             mOpenMapApp.setVisibility(View.INVISIBLE);
+            mOpenShare.setVisibility(View.INVISIBLE);
         }
     }
 

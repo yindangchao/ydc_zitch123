@@ -21,8 +21,8 @@ public class ZLocation {
     // Scratchpad
     private final float[] mResults = new float[2];
 
-    final int GPS = 1;
-    final int BD = 2;
+  public static   final int GPS = 1;
+    public static    final int BD = 2;
 
     int TYPE = GPS;
 

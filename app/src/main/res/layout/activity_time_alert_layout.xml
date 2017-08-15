@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/time_alert_alert_icon_white"/>
+        android:src="@drawable/time_alert_alert_icon_red"/>
 
     <TextView
         android:id="@+id/time_alert_countdown_time"
@@ -30,7 +30,6 @@
         android:layout_gravity="center_horizontal"
         android:textColor="@color/white"
         android:textSize="@dimen/font_14"
-        android:visibility="gone"
         android:text="@string/alert_time_ten_mins_left"/>
 
     <LinearLayout
@@ -46,9 +45,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/dp_30"
-            android:background="@drawable/seletor_time_alert_btn_white"
+            android:background="@drawable/bg_round_yellow"
             android:gravity="center"
-            android:textColor="@color/time_alert_btn_close"
+            android:paddingRight="@dimen/dp_30"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_30"
+            android:textColor="@color/common_black_color"
             android:textSize="@dimen/font_18"
             android:text="@string/TurnOff"/>
 
@@ -56,9 +59,13 @@
             android:id="@+id/time_alert_btn_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/seletor_time_alert_btn_white"
+            android:background="@drawable/bg_round_yellow"
             android:gravity="center"
-            android:textColor="@color/time_alert_btn_save"
+            android:paddingRight="@dimen/dp_30"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_30"
+            android:textColor="@color/common_black_color"
             android:textSize="@dimen/font_18"
             android:text="@string/Continue"/>
     </LinearLayout>

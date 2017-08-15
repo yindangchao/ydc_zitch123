@@ -1,7 +1,9 @@
 package com.vanpro.zitech125.ui.fragment;
 
 import android.content.Intent;
+import android.text.Html;
 import android.view.View;
+import android.widget.TextView;
 
 import com.vanpro.zitech125.R;
 import com.vanpro.zitech125.ui.activity.TurnOnBLEHelpActivity;
@@ -29,7 +31,9 @@ public class OpenBluetoothFragment extends BaseFragment {
 
             }
         });
-
+        TextView tv = (TextView) findViewById(R.id.turn_on_ble_unit);
+        String exchange= getResources().getString(R.string.open_bt_yellow);
+        tv.setText(Html.fromHtml(exchange));
         findViewById(R.id.turn_on_ble_locator_accuracy_help).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -93,6 +93,7 @@
     <string name="compass_park_time_minute_ago">%1$d minute avant</string>
     <string name="compass_park_time_hours_ago">%1$d heure %2$dminute avant</string>
     <string name="found_devices_again">Veuillez réessayer</string>
+    <string name="found_devices_scaning">Scanning..</string>
     <string name="map_ble_connected">Le succès de la connexion Bluetooth</string>
     <string name="map_ble_disconnected">Un échec de la connexion</string>
     <string name="open_bt_turn_on">Activer le bluetooth</string>

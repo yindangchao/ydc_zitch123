@@ -144,10 +144,10 @@ public class SettingFragment extends BaseFragment implements OnClickListener {
 
     private void remove() {
         final CommAlertDialog dialog = new CommAlertDialog(getActivity());
-        dialog.setTitle(getString(R.string.setting_remove_title));
-        dialog.setMessage(getString(R.string.setting_remove_content));
+        dialog.setTitle(getString(R.string.setting_remove_content));
+//        dialog.setMessage(getString(R.string.setting_remove_content));
         dialog.setLeftBtn(getString(R.string.cancel), null);
-        dialog.setRightBtn(getString(R.string.sure), new OnClickListener() {
+        dialog.setRightBtn(getString(R.string.disconnect), new OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();

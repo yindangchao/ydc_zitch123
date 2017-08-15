@@ -83,7 +83,7 @@ public class TimeAlertActivity extends Activity implements View.OnClickListener{
             case R.id.time_alert_btn_left:
                 CommAlertDialog dialog = new CommAlertDialog(this);
                 dialog.setTitle(getString(R.string.setting_park_time_finish_alert));
-                dialog.setRightBtn(getString(R.string.sure_remove), new View.OnClickListener() {
+                dialog.setRightBtn(getString(R.string.setting_park_turn_off_sure), new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         if(isBigTenMins){
@@ -137,32 +137,32 @@ public class TimeAlertActivity extends Activity implements View.OnClickListener{
         if (mAlertCountdownTime > 6) {
             isBigTenMins = true;
 
-            mIcon.setImageResource(R.drawable.time_alert_alert_icon_white);
-            mLeftBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_white);
-            mRightBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_white);
+            mIcon.setImageResource(R.drawable.time_alert_alert_icon_red);
+//            mLeftBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_white);
+//            mRightBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_white);
             mRightBtn.setText(R.string.Continue);
-            mRightBtn.setTextColor(getResources().getColor(R.color.time_alert_btn_save));
+            mRightBtn.setTextColor(getResources().getColor(R.color.common_black_color));
         } else {
             isBigTenMins = false;
             mIcon.setImageResource(R.drawable.time_alert_alert_icon_red);
             mLeftBtn.setVisibility(View.GONE);
-            mRightBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_red);
+//            mRightBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_red);
             mRightBtn.setText(R.string.TurnOff);
-            mRightBtn.setTextColor(getResources().getColor(R.color.time_alert_btn_red));
+            mRightBtn.setTextColor(getResources().getColor(R.color.common_black_color));
         }
 
     }
 
     private void expired(){
         mCountdownTimeTx.setText("00:00:00");
-        mRightBtn.setTextColor(getResources().getColor(R.color.time_alert_btn_red));
+        mRightBtn.setTextColor(getResources().getColor(R.color.common_black_color));
         mIcon.setImageResource(R.drawable.time_alert_alert_icon_red);
-        mLeftBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_red);
-        mRightBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_red);
+//        mLeftBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_red);
+//        mRightBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_red);
         mLeftBtn.setVisibility(View.GONE);
-        mRightBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_red);
+//        mRightBtn.setBackgroundResource(R.drawable.seletor_time_alert_btn_red);
         mRightBtn.setText(R.string.TurnOff);
-        mRightBtn.setTextColor(getResources().getColor(R.color.time_alert_btn_red));
+        mRightBtn.setTextColor(getResources().getColor(R.color.common_black_color));
     }
 
     public void onEventMainThread(StatusChangeEvent event) {

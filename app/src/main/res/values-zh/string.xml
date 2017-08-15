@@ -91,6 +91,7 @@
     <string name="compass_within_text">误差 %1$d %2$s</string>
     <string name="compass_park_time_minute_ago">%1$d 分钟以前</string>
     <string name="compass_park_time_hours_ago">%1$d 小时 %2$d分钟之前</string>
+    <string name="found_devices_scaning">正在扫描..</string>
     <string name="found_devices_again">再试一次连接</string>
     <string name="map_ble_connected">蓝牙连接成功</string>
     <string name="map_ble_disconnected">连接成功</string>
