@@ -197,7 +197,7 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
     }
 
     private void shareUmplatforms() {
-        UMengUtils.share(getActivity(), "", "", imgUrl, imgUrl, new UMengShareListener() {
+        UMengUtils.share(getActivity(), "i'm here", "i'm here", imgUrl, R.drawable.logo, new UMengShareListener() {
 
             @Override
             public void onStart(UMengUtils.SHARE_PLATFORM platform) {
