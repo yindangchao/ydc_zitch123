@@ -13,14 +13,6 @@ import com.umeng.socialize.media.UMImage;
 import com.umeng.socialize.media.UMWeb;
 import com.vanpro.zitech125.R;
 
-import static com.vanpro.zitech125.util.umengsdk.UMengUtils.SHARE_PLATFORM.FACEBOOK;
-import static com.vanpro.zitech125.util.umengsdk.UMengUtils.SHARE_PLATFORM.FACEBOOK_MESSAGER;
-import static com.vanpro.zitech125.util.umengsdk.UMengUtils.SHARE_PLATFORM.SHARE_PLATFORM_QQ;
-import static com.vanpro.zitech125.util.umengsdk.UMengUtils.SHARE_PLATFORM.SHARE_PLATFORM_QZONE;
-import static com.vanpro.zitech125.util.umengsdk.UMengUtils.SHARE_PLATFORM.SHARE_PLATFORM_SINA;
-import static com.vanpro.zitech125.util.umengsdk.UMengUtils.SHARE_PLATFORM.SHARE_PLATFORM_WECHAT;
-import static com.vanpro.zitech125.util.umengsdk.UMengUtils.SHARE_PLATFORM.SHARE_PLATFORM_WECHAT_CIRCLE;
-import static com.vanpro.zitech125.util.umengsdk.UMengUtils.SHARE_PLATFORM.WHATSAPP;
 
 /**
  * Created by Neil.Yang on 2017/3/20.
@@ -83,6 +75,7 @@ public final class UMengUtils {
 
     public static final SHARE_MEDIA[] alldisplaylist = new SHARE_MEDIA[]
             {
+                    SHARE_MEDIA.EMAIL, SHARE_MEDIA.SMS,
                     SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE,
                     SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.SINA,
                     SHARE_MEDIA.FACEBOOK, SHARE_MEDIA.FACEBOOK_MESSAGER,
@@ -91,6 +84,7 @@ public final class UMengUtils {
 
     public static final SHARE_MEDIA[] displaylist = new SHARE_MEDIA[]
             {
+                    SHARE_MEDIA.EMAIL, SHARE_MEDIA.SMS,
                     SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE,
                     SHARE_MEDIA.FACEBOOK, SHARE_MEDIA.FACEBOOK_MESSAGER,
                     SHARE_MEDIA.WHATSAPP
@@ -108,12 +102,14 @@ public final class UMengUtils {
         SHARE_PLATFORM_SINA,
         FACEBOOK,
         FACEBOOK_MESSAGER,
-        WHATSAPP
+        WHATSAPP,
+        EMAIL,
+        SMS
     }
 
     private static SHARE_PLATFORM convertPlatform(SHARE_MEDIA share_media) {
         if (share_media == SHARE_MEDIA.QQ) {
-            return SHARE_PLATFORM_QQ;
+            return SHARE_PLATFORM.SHARE_PLATFORM_QQ;
         } else if (share_media == SHARE_MEDIA.WEIXIN) {
             return SHARE_PLATFORM.SHARE_PLATFORM_WECHAT;
         } else if (share_media == SHARE_MEDIA.SINA) {
@@ -128,27 +124,35 @@ public final class UMengUtils {
             return SHARE_PLATFORM.FACEBOOK_MESSAGER;
         } else if (share_media == SHARE_MEDIA.WHATSAPP) {
             return SHARE_PLATFORM.WHATSAPP;
+        } else if (share_media == SHARE_MEDIA.EMAIL) {
+            return SHARE_PLATFORM.EMAIL;
+        } else if (share_media == SHARE_MEDIA.SMS) {
+            return SHARE_PLATFORM.SMS;
         }
         return null;
     }
 
     private static SHARE_MEDIA convertPlatform(SHARE_PLATFORM share_media) {
-        if (share_media == SHARE_PLATFORM_QQ) {
+        if (share_media == SHARE_PLATFORM.SHARE_PLATFORM_QQ) {
             return SHARE_MEDIA.QQ;
-        } else if (share_media == SHARE_PLATFORM_WECHAT) {
+        } else if (share_media == SHARE_PLATFORM.SHARE_PLATFORM_WECHAT) {
             return SHARE_MEDIA.WEIXIN;
-        } else if (share_media == SHARE_PLATFORM_SINA) {
+        } else if (share_media == SHARE_PLATFORM.SHARE_PLATFORM_SINA) {
             return SHARE_MEDIA.SINA;
-        } else if (share_media == SHARE_PLATFORM_QZONE) {
+        } else if (share_media == SHARE_PLATFORM.SHARE_PLATFORM_QZONE) {
             return SHARE_MEDIA.QZONE;
-        } else if (share_media == SHARE_PLATFORM_WECHAT_CIRCLE) {
+        } else if (share_media == SHARE_PLATFORM.SHARE_PLATFORM_WECHAT_CIRCLE) {
             return SHARE_MEDIA.WEIXIN_CIRCLE;
-        } else if (share_media == FACEBOOK) {
+        } else if (share_media == SHARE_PLATFORM.FACEBOOK) {
             return SHARE_MEDIA.FACEBOOK;
-        } else if (share_media == FACEBOOK_MESSAGER) {
+        } else if (share_media == SHARE_PLATFORM.FACEBOOK_MESSAGER) {
             return SHARE_MEDIA.FACEBOOK_MESSAGER;
-        } else if (share_media == WHATSAPP) {
+        } else if (share_media == SHARE_PLATFORM.WHATSAPP) {
             return SHARE_MEDIA.WHATSAPP;
+        } else if (share_media == SHARE_PLATFORM.SMS) {
+            return SHARE_MEDIA.SMS;
+        } else if (share_media == SHARE_PLATFORM.EMAIL) {
+            return SHARE_MEDIA.EMAIL;
         }
         return null;
     }
@@ -173,10 +177,10 @@ public final class UMengUtils {
      *
      * @Param context ： activity
      * @Param title ： 分享标题
-    * @Param targetUrl ： 分享链接的地址
-    * @Param imgUrl ： 网络的图片资源
-    * @Param listener ： 分享回调
-    */
+     * @Param targetUrl ： 分享链接的地址
+     * @Param imgUrl ： 网络的图片资源
+     * @Param listener ： 分享回调
+     */
     public static void share(Activity context, String title, String content, String targetUrl, String imgUrl, final UMengShareListener listener) {
         share(context, title, content, targetUrl, new UMImage(context, imgUrl), listener);
     }
