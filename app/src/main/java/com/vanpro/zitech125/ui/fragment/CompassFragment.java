@@ -102,6 +102,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         mConnectedState1View.setTypeface(typeface);
         mConnectedState2View.setTypeface(typeface);
         mDescTv.setTypeface(typeface);
+        tvOnlyMinute.setTypeface(typeface);
     }
 
     @Override
