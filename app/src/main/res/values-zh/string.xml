@@ -70,7 +70,7 @@
     <string name="photo_mark_menu_title">标记楼层或有用提示</string>
     <string name="photo_mark_menu_Retake">重拍</string>
     <string name="recommon_menu_open">使用导航软件打开</string>
-    <string name="recommon_menu_Recommend">推荐给好友</string>
+    <string name="recommon_menu_Recommend">分享给好友</string>
     <string name="share_title">Airdrop, 与附近人共享，如果你没看到他们，叫他们打开苹果手机上的AirDrop控制中心或打开MacBook电脑Finder中的AirDrop</string>
     <string name="share_message">消息</string>
     <string name="share_email">邮件</string>

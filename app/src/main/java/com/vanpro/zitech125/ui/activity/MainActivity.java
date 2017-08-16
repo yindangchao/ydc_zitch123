@@ -41,6 +41,7 @@ import com.vanpro.zitech125.manage.StatusManage;
 import com.vanpro.zitech125.present.LocationMgr;
 import com.vanpro.zitech125.service.UpgradeManager;
 import com.vanpro.zitech125.ui.dialog.CommAlertDialog;
+import com.vanpro.zitech125.ui.dialog.RecommonDialog;
 import com.vanpro.zitech125.ui.dialog.ShareNewDialog;
 import com.vanpro.zitech125.ui.extend.BaseFragment;
 import com.vanpro.zitech125.ui.fragment.BindBluetoothFragment;
@@ -326,15 +327,17 @@ public class MainActivity extends FragmentActivity {
                     MapFragment mapFragment = (MapFragment) baseFragment;
                     if (mapFragment != null) {
                         ZLocation location = mapFragment.getmCurrentLocation();
-                        int type = location.getType();
-//                    if (type == ZLocation.GPS){
-                        url = "http://maps.google.com/maps?q=Dan@" + location.getLongitude() + "," + location.getLatitude();
+                        if (location!=null){
+                            int type = location.getType();
+                            url = "http://maps.google.com/maps?q=Dan@" + location.getLatitude() + "," + location.getLongitude();
+                        }
+                        //                    if (type == ZLocation.GPS){
 //                    }else if (type == ZLocation.BD){
 //                        url = "http://api.map.baidu.com/marker?location="+location.getBDLocation().getLongitude()+","+location.getBDLocation().getLatitude()+"&title=MyLocation&output=html";
 //                    }
                     }
                 }
-                new ShareNewDialog(MainActivity.this, url).show();
+                new RecommonDialog(MainActivity.this,url).show();
             }
         });
     }

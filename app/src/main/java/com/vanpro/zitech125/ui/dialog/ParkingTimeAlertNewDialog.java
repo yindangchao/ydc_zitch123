@@ -57,7 +57,7 @@ public class ParkingTimeAlertNewDialog extends Dialog implements View.OnClickLis
         wheelPicker.setCyclic(true);
         wheelPicker.setCurved(true);
         wheelPicker.setVisibleItemCount(3);
-        wheelPicker.setItemSpace(AndroidUtils.dp2px(mContext, 15));
+        wheelPicker.setItemSpace(AndroidUtils.dp2px(mContext, 10));
     }
 
     private void initPickView() {

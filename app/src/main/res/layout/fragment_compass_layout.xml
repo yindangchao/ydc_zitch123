@@ -19,7 +19,7 @@
         android:id="@+id/navi_by_compass_view"
         android:layout_width="match_parent"
         android:layout_height="360dp"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <com.vanpro.zitech125.ui.widget.CompassView
             android:id="@+id/navigation_view"
@@ -109,7 +109,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <ImageView
             android:id="@+id/navi_by_photo_pic_imageview"
@@ -128,7 +128,7 @@
             android:gravity="center"
             android:padding="@dimen/dp_10"
             android:text="@string/compass_photo_tips_desc"
-            android:textColor="@color/common_normal_text"
+            android:textColor="@color/white"
             android:textSize="@dimen/font_12"/>
 
         <ImageView
@@ -203,45 +203,49 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dp_15"
             android:text="@string/compass_last_park_time"
-            android:textSize="@dimen/font_16"
-            android:textColor="@color/common_desc_text"/>
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16" />
 
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/lin_only_minute"
-            android:layout_marginTop="2.5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginTop="2.5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
             <TextView
                 android:id="@+id/tv_minute"
-                android:textColor="@color/white"
-                android:text="0"
-                android:textSize="30sp"
-                android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
             <TextView
                 android:layout_width="wrap_content"
-                android:text="MINS\nAGO"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:textColor="@color/white"
-                android:layout_height="wrap_content" />
+                android:text="MINS\nAGO"
+                android:textColor="@color/white" />
         </LinearLayout>
+
         <TextView
             android:id="@+id/navi_compass_parking_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/navi_by_photo_take_photo_desc_text"
             android:layout_centerHorizontal="true"
-            android:paddingLeft="@dimen/dp_20"
-            android:paddingRight="@dimen/dp_20"
+            android:layout_marginTop="2.5dp"
             android:gravity="center"
             android:minWidth="@dimen/dp_150"
-            android:layout_marginTop="2.5dp"
-            android:textSize="@dimen/font_18"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
             android:text="@string/compass_park_time_less_minute"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_18" />
 
 
         <ImageView
@@ -252,7 +256,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:padding="@dimen/dp_5"
-            android:src="@drawable/time_alert_alert_icon_red"/>
+            android:src="@drawable/time_alert_alert_icon_red" />
 
         <TextView
             android:id="@+id/navi_compass_parking_alert_countdown"
@@ -261,16 +265,15 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:gravity="center_vertical"
-            android:textSize="@dimen/font_20"
-            android:textColor="@color/common_orgin_color"
-            android:text="30:00:00"
-            android:singleLine="true"
-            android:paddingRight="@dimen/dp_20"
-            android:visibility="gone"
-            android:drawablePadding="@dimen/dp_10"
             android:drawableLeft="@drawable/time_alert_alert_icon_red"
-          />
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_20"
+            android:singleLine="true"
+            android:text="30:00:00"
+            android:textColor="@color/common_orgin_color"
+            android:textSize="@dimen/font_20"
+            android:visibility="gone" />
     </LinearLayout>
 
 </LinearLayout>

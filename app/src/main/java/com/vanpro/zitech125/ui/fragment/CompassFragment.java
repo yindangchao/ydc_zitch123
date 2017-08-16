@@ -26,6 +26,7 @@ import com.vanpro.zitech125.location.ZLocation;
 import com.vanpro.zitech125.manage.NotificationMgr;
 import com.vanpro.zitech125.manage.StatusManage;
 import com.vanpro.zitech125.ui.activity.TimeAlertActivity;
+import com.vanpro.zitech125.ui.dialog.ParkingTimeAlertDialog;
 import com.vanpro.zitech125.ui.dialog.ParkingTimeAlertNewDialog;
 import com.vanpro.zitech125.ui.dialog.PhotoSettingDialog;
 import com.vanpro.zitech125.ui.extend.BaseFragment;
@@ -76,7 +77,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
     boolean isMeterUnitType = true;
     int mCurStatus = -1;
 
-    ParkingTimeAlertNewDialog mParkingTimeAlertDialog = null;
+    ParkingTimeAlertDialog mParkingTimeAlertDialog = null;
     PhotoSettingDialog mPhotoSettingDialog = null;
 
     private LinearLayout linOnlyMinute;
@@ -172,7 +173,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
 
 
     private void setCountDownTime() {
-        mParkingTimeAlertDialog = new ParkingTimeAlertNewDialog(getContext());
+        mParkingTimeAlertDialog = new ParkingTimeAlertDialog(getContext());
         mParkingTimeAlertDialog.show();
     }
 
@@ -485,7 +486,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
     }
 
     private void initParkingTimeState() {
-        if (mParkTime < 60) {
+        if (mParkTime < 60 && mParkTime >= 1) {
             linOnlyMinute.setVisibility(View.VISIBLE);
             mParkLongTv.setVisibility(View.GONE);
             tvOnlyMinute.setText(mParkTime + "");

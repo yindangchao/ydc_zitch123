@@ -16,6 +16,7 @@ import com.vanpro.zitech125.event.StatusChangeEvent;
 import com.vanpro.zitech125.location.ZLocation;
 import com.vanpro.zitech125.manage.StatusManage;
 import com.vanpro.zitech125.present.LocationMgr;
+import com.vanpro.zitech125.ui.activity.MainActivity;
 import com.vanpro.zitech125.util.AndroidUtils;
 import com.vanpro.zitech125.util.umengsdk.UMengShareListener;
 import com.vanpro.zitech125.util.umengsdk.UMengUtils;
@@ -72,7 +73,7 @@ public class RecommonDialog extends Dialog implements View.OnClickListener {
 
             case R.id.recommon_share:
 //                shareDialog();
-        shareUmplatforms();
+                new ShareNewDialog(mContext, shareUrl).show();
                 dismiss();
                 break;
 
@@ -180,8 +181,8 @@ public class RecommonDialog extends Dialog implements View.OnClickListener {
             mOpenMapApp.setVisibility(View.VISIBLE);
             mOpenShare.setVisibility(View.VISIBLE);
         }else{
-            mOpenMapApp.setVisibility(View.INVISIBLE);
-            mOpenShare.setVisibility(View.INVISIBLE);
+            mOpenMapApp.setVisibility(View.GONE);
+            mOpenShare.setVisibility(View.GONE);
         }
     }
 

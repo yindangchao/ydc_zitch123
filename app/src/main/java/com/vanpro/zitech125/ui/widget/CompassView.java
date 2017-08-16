@@ -115,31 +115,32 @@ public class CompassView extends RelativeLayout {
 
         if(mDistance > 20){
             mArrowLineIv.setImageResource(R.drawable.compass_arrow_line_s);
-            if(mSectorDrawableState == 1){
-                return;
-            }else{
-                mSectorDrawableState = 1;
+//            if(mSectorDrawableState == 1){
+//                return;
+//            }else{
+//                mSectorDrawableState = 1;
                 if(mArrowSectorAd != null)
                     mArrowSectorAd.stop();
                 mArrowSectorIv.setImageResource(R.drawable.compass_arrow_sector_s);
                 mArrowSectorAd = (AnimationDrawable) mArrowSectorIv.getDrawable();
                 mArrowSectorAd.start();
 
-            }
+//            }
         }else if(mDistance > 5){
             mArrowLineIv.setImageResource(R.drawable.compass_arrow_line);
-            if(mSectorDrawableState == 2){
-                return;
-            }else{
-                mSectorDrawableState = 2;
+//            if(mSectorDrawableState == 2){
+//                return;
+//            }else{
+//                mSectorDrawableState = 2;
 
                 if(mArrowSectorAd != null)
                     mArrowSectorAd.stop();
                 mArrowSectorIv.setImageResource(R.drawable.compass_arrow_sector_b);
                 mArrowSectorAd = (AnimationDrawable) mArrowSectorIv.getDrawable();
                 mArrowSectorAd.start();
-            }
+//            }
         }else{
+//            mSectorDrawableState = 0;
             setState(CompassState.NEARBY);
         }
     }

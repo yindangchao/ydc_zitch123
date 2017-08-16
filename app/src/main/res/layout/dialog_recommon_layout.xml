@@ -25,7 +25,7 @@
 
     <!--<include layout="@layout/view_line_layout"/>-->
     <!--</LinearLayout>-->
-
+    <include layout="@layout/view_line_layout"/>
     <TextView
         android:id="@+id/recommon_cancel"
         style="@style/dialog_recommon_item_style"

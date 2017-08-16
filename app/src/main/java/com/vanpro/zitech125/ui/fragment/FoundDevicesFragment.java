@@ -44,7 +44,7 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
 
     private static final int REQUEST_ENABLE_BT = 1;
     // Stops scanning after 10 seconds.
-    private static final long SCAN_PERIOD = 300000;
+    private static final long SCAN_PERIOD = 30000;
 
     String UUIDSTR = "0000ffe0-0000-1000-8000-00805f9b34fb";
 
@@ -196,6 +196,7 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
             return;
         else
             scanLeDevice(true);
+//        shareViber();
 //        new ParkingTimeAlertNewDialog(getContext()).show();
 //            new ShareNewDialog(getActivity(), "http://www.baidu.com").show();
     }
@@ -226,7 +227,7 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
     }
 
     private void shareViber() {
-        boolean found = false;
+        boolean found = true;
         Intent share = new Intent(android.content.Intent.ACTION_SEND);
         share.setType("text/plain");
 

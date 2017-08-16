@@ -20,7 +20,7 @@
 
     <string name="location_distance_str">Distance ±%1$d %2$s</string>
 
-    <string name="car_is_nearby">Your Car is nearby</string>
+    <string name="car_is_nearby">Your Car is Nearby</string>
 
     <!--- time alert -->
     <string name="TurnOff">Turn off</string>
@@ -34,7 +34,7 @@
     <string name="alert_locaion_fail_text">No GPS signal.we advise you to takea photo.</string>
 
     <!--- alert time dialog -->
-    <string name="setting_park_time_title">Set the parking time</string>
+    <string name="setting_park_time_title">Set the Parking Timer</string>
     <string name="setting_park_time_30m">30 minutes</string>
     <string name="setting_park_time_45m">45 minutes</string>
     <string name="setting_park_time_1h">1 hour</string>
@@ -42,8 +42,8 @@
     <string name="setting_park_time_3h">3 hours</string>
     <string name="setting_park_time_4h">4 hours</string>
     <string name="setting_park_time_more">more</string>
-    <string name="setting_park_time_close">close</string>
-    <string name="setting_park_time_save">save</string>
+    <string name="setting_park_time_close">CLOSE</string>
+    <string name="setting_park_time_save">SAVE</string>
     <string name="setting_park_time_finish_alert">Are you sure you want to turn it off?</string>
     <string name="setting_park_turn_off_sure">Turn off</string>
     <string name="location_succ_alert">Location success</string>
@@ -85,7 +85,7 @@
     <string name="photo_mark_menu_Retake">Retake</string>
 
     <!-- recommon menu -->
-    <string name="recommon_menu_open">Open in Map App</string>
+    <string name="recommon_menu_open">Open location in Maps</string>
     <string name="recommon_menu_Recommend">Share</string>
     <string name="share_title">AirDrop.Share with people nearby.If you don\'t see them have them turn on AirDropin Control Center on iOS.or go to AirDrop in Finder on A Mac.</string>
     <string name="share_message">Message</string>
@@ -107,7 +107,7 @@
     <string name="compass_last_park_time">Last Parking Time</string>
     <string name="compass_park_time_less_minute">Less than a minute ago</string>
     <string name="compass_action_desc">Press home button to close the app\nleaving it working in the background</string>
-    <string name="fyndr_is_connect">Ok...Fyndr is Connected\n\nPress the home button on your device\n to close the Fyndr app.\nleaving it to run in the background.</string>
+    <string name="fyndr_is_connect">Fyndr is Connected\n\nPress the home button\n to close the Fyndr app.\nLeaving it to run in the background.</string>
     <string name="compass_within_text">Within %1$d %2$s</string>
     <string name="compass_park_time_minute_ago">%1$d mins ago</string>
     <string name="compass_park_time_hours_ago">%1$d hours %2$d mins ago</string>
@@ -121,8 +121,8 @@
 
     <!-- open bt -->
     <string name="open_bt_turn_on">Turn On Bluetooth</string>
-    <string name="open_bt_setting">OK. I got it</string>
-    <string name="open_bt_yellow"><Data><![CDATA[Please Turn <font color="#f7db3c">On</font> Bluetooth]]></Data></string>
+    <string name="open_bt_setting">OK, I got it</string>
+    <string name="open_bt_yellow"><Data><![CDATA[Please Turn <font color="#f7db3c">ON</font> Bluetooth]]></Data></string>
 
     <string name="turn_on_ble_title">Please Turn On Bluetooth</string>
     <string name="turn_on_bel_desc">Bluetooth is required to connect \n Fyndr to your smartphone.</string>
@@ -166,9 +166,7 @@
 
     <string name="common_problem_2_title">2.  Can I leave Fyndr charger in my car or do I need to take it with me for it to locate my parked car?</string>
 
-    <string name="common_problem_2_content"> Can I leave Fyndr charger in my car or do I need to take it with me for it to locate my parked car?
-
-You can leave your Fyndr in your 12V power socket – you do not have to take it with you. When you have parked your car and have turned off your engine, Fyndr will automatically pin your location using the GPS on your phone. </string>
+    <string name="common_problem_2_content"> You can leave your Fyndr in your 12V power socket – you do not have to take it with you. When you have parked your car and have turned off your engine, Fyndr will automatically pin your location using the GPS on your phone. </string>
     <string name="common_problem_3_title">3.  What happens if Fyndr is directing me to my parked car location and it is not there?  </string>
     <string name="common_problem_4_title">4. What happens if I park my car and Fyndr cannot locate my location to pin?</string>
     <string name="common_problem_3_content">Fyndr will always take you to the location where your vehicle was last parked. If Fyndr is directing you to a location and your parked par is not located in this location, it may indicate your vehicle has been moved from this location. If your vehicle is not located where Fyndr has directed you, someone may have moved it.</string>
@@ -178,7 +176,7 @@ You can leave your Fyndr in your 12V power socket – you do not have to take it
 
     <!-- notification -->
     <string name="app_runing">Fyndr runing</string>
-    <string name="alert_open_gps_title">GPS is not enabled?</string>
+    <string name="alert_open_gps_title">GPS is not enabled.</string>
     <string name="alert_open_gps_setting_btn">Go to Set Up</string>
 
     <!-- upgrade -->
@@ -228,5 +226,6 @@ string in this file.
     <string name="share_to_message">Message</string>
     <string name="share_to_email">E-mail</string>
     <string name="share_to_whatsapp">Whatsapp</string>
+    <string name="share_to_viber">viber</string>
     <string name="share_success">share_success</string>
 </resources>

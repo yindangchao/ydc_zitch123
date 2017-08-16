@@ -101,6 +101,31 @@
                 android:textColor="@color/common_black_color"
                 android:textSize="12sp" />
         </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_viber"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_viber"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_round_white"
+                android:src="@drawable/umeng_socialize_whatsapp" />
+
+            <TextView
+                android:id="@+id/tv_viber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_viber"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/share_to_viber"
+                android:textColor="@color/common_black_color"
+                android:textSize="12sp" />
+        </RelativeLayout>
     </LinearLayout>
 
     <TextView
