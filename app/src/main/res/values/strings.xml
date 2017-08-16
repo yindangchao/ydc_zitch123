@@ -34,7 +34,7 @@
     <string name="alert_locaion_fail_text">No GPS signal.we advise you to takea photo.</string>
 
     <!--- alert time dialog -->
-    <string name="setting_park_time_title">Set the parking time\nto remind you</string>
+    <string name="setting_park_time_title">Set the parking time</string>
     <string name="setting_park_time_30m">30 minutes</string>
     <string name="setting_park_time_45m">45 minutes</string>
     <string name="setting_park_time_1h">1 hour</string>
@@ -98,7 +98,7 @@
 
     <!-- compass -->
     <string name="compass_connected_desc">is Connected</string>
-    <string name="unit_meters_upcase">METERS</string>
+    <string name="unit_meters_upcase">METRES</string>
     <string name="unit_feet_upcase">FEET</string>
     <string name="compass_photo_tips_desc">Unable to find your location\nTake a photo of your surroundings \nto help find your parked car later on.</string>
     <string name="compass_photo_take_photo_text">Take a photo</string>
@@ -107,7 +107,7 @@
     <string name="compass_last_park_time">Last Parking Time</string>
     <string name="compass_park_time_less_minute">Less than a minute ago</string>
     <string name="compass_action_desc">Press home button to close the app\nleaving it working in the background</string>
-    <string name="fyndr_is_connect">Ok...Fyndr is Connected</string>
+    <string name="fyndr_is_connect">Ok...Fyndr is Connected\n\nPress the home button on your device\n to close the Fyndr app.\nleaving it to run in the background.</string>
     <string name="compass_within_text">Within %1$d %2$s</string>
     <string name="compass_park_time_minute_ago">%1$d mins ago</string>
     <string name="compass_park_time_hours_ago">%1$d hours %2$d mins ago</string>
@@ -142,7 +142,7 @@
     <string name="setting_information_notification">Information Notification</string>
     <string name="setting_unit_title">Unit</string>
     <string name="setting_unit_feet">Feet</string>
-    <string name="setting_unit_meters">Meters</string>
+    <string name="setting_unit_meters">Metres</string>
     <string name="setting">Setting</string>
 
     <string name="setting_version">Version: %1$s</string>
@@ -155,7 +155,7 @@
     <string name="contact_us_website">www.zz-power.com</string>
 
     <!-- start -->
-    <string name="start_desc">Distance ±20 Meters</string>
+    <string name="start_desc">Distance ±20 Metres</string>
 
     <string name="share_app_text">Where is your car？Fyndr app can really help you.</string>
 
@@ -223,4 +223,10 @@ string in this file.
 
     <string name="ble_connecting_str">Searching for Bluetooth Devices</string>
     <string name="sure_remove">remove</string>
+    <!--分享 -->
+    <string name="share_new_title">Select Sharing Platforms</string>
+    <string name="share_to_message">Message</string>
+    <string name="share_to_email">E-mail</string>
+    <string name="share_to_whatsapp">Whatsapp</string>
+    <string name="share_success">share_success</string>
 </resources>

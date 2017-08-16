@@ -26,6 +26,7 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.umeng.socialize.UMShareAPI;
 import com.vanpro.zitech125.R;
 import com.vanpro.zitech125.alert.AlertUtil;
 import com.vanpro.zitech125.bluetooth.BleUtil;
@@ -40,7 +41,7 @@ import com.vanpro.zitech125.manage.StatusManage;
 import com.vanpro.zitech125.present.LocationMgr;
 import com.vanpro.zitech125.service.UpgradeManager;
 import com.vanpro.zitech125.ui.dialog.CommAlertDialog;
-import com.vanpro.zitech125.ui.dialog.RecommonDialog;
+import com.vanpro.zitech125.ui.dialog.ShareNewDialog;
 import com.vanpro.zitech125.ui.extend.BaseFragment;
 import com.vanpro.zitech125.ui.fragment.BindBluetoothFragment;
 import com.vanpro.zitech125.ui.fragment.CompassFragment;
@@ -52,13 +53,11 @@ import com.vanpro.zitech125.util.AndroidUtils;
 import com.vanpro.zitech125.util.AppDataManager;
 import com.vanpro.zitech125.util.CompassSensor;
 import com.vanpro.zitech125.util.LogUtil;
+import com.vanpro.zitech125.util.StringUtil;
 
 import java.util.HashMap;
 
 import de.greenrobot.event.EventBus;
-import com.vanpro.zitech125.util.StringUtil;
-import com.vanpro.zitech125.util.umengsdk.UMengShareListener;
-import com.vanpro.zitech125.util.umengsdk.UMengUtils;
 
 /**
  * Created by Jinsen on 16/12
@@ -321,23 +320,21 @@ public class MainActivity extends FragmentActivity {
         mSharedBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url="";
+                String url = "";
                 BaseFragment baseFragment = mTabFragment.get(TAB_MAP);
-                if (baseFragment!=null){
-                    MapFragment mapFragment   =   (MapFragment)baseFragment;
-                    if (mapFragment!=null){
-                        ZLocation location=  mapFragment.getmCurrentLocation();
-                        int type=     location.getType();
+                if (baseFragment != null) {
+                    MapFragment mapFragment = (MapFragment) baseFragment;
+                    if (mapFragment != null) {
+                        ZLocation location = mapFragment.getmCurrentLocation();
+                        int type = location.getType();
 //                    if (type == ZLocation.GPS){
-                        url = "http://maps.google.com/maps?q=Dan@"+location.getLongitude()+","+location.getLatitude();
+                        url = "http://maps.google.com/maps?q=Dan@" + location.getLongitude() + "," + location.getLatitude();
 //                    }else if (type == ZLocation.BD){
 //                        url = "http://api.map.baidu.com/marker?location="+location.getBDLocation().getLongitude()+","+location.getBDLocation().getLatitude()+"&title=MyLocation&output=html";
 //                    }
                     }
                 }
-                    new RecommonDialog(MainActivity.this,url).show();
-
-
+                new ShareNewDialog(MainActivity.this, url).show();
             }
         });
     }
@@ -517,6 +514,7 @@ public class MainActivity extends FragmentActivity {
         } else if (mTabFragment.containsKey(TAB_COMPASS)) {
             mTabFragment.get(TAB_COMPASS).onActivityResult(requestCode, resultCode, data);
         }
+        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
     }
 
     private void registerGPSChanageListener() {
@@ -714,5 +712,6 @@ public class MainActivity extends FragmentActivity {
             AndroidUtils.verifyStoragePermissions(this);
         }
     }
+
 
 }

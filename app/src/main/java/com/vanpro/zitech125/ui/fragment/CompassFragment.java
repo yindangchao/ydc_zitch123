@@ -26,7 +26,7 @@ import com.vanpro.zitech125.location.ZLocation;
 import com.vanpro.zitech125.manage.NotificationMgr;
 import com.vanpro.zitech125.manage.StatusManage;
 import com.vanpro.zitech125.ui.activity.TimeAlertActivity;
-import com.vanpro.zitech125.ui.dialog.ParkingTimeAlertDialog;
+import com.vanpro.zitech125.ui.dialog.ParkingTimeAlertNewDialog;
 import com.vanpro.zitech125.ui.dialog.PhotoSettingDialog;
 import com.vanpro.zitech125.ui.extend.BaseFragment;
 import com.vanpro.zitech125.ui.widget.CompassView;
@@ -76,7 +76,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
     boolean isMeterUnitType = true;
     int mCurStatus = -1;
 
-    ParkingTimeAlertDialog mParkingTimeAlertDialog = null;
+    ParkingTimeAlertNewDialog mParkingTimeAlertDialog = null;
     PhotoSettingDialog mPhotoSettingDialog = null;
 
     private LinearLayout linOnlyMinute;
@@ -87,8 +87,9 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
     protected int getLayoutResourceId() {
         return R.layout.fragment_compass_layout;
     }
-    private void initTypeFace(){
-     typeface = Typeface.createFromAsset(getContext().getAssets(),"fonts/MarkOT-Bold.ttf");
+
+    private void initTypeFace() {
+        typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/MarkOT-Bold.ttf");
         mPhotoTipsTv.setTypeface(typeface);
         mTakePhotoTv.setTypeface(typeface);
         mPoolGpsTv.setTypeface(typeface);
@@ -102,6 +103,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         mConnectedState2View.setTypeface(typeface);
         mDescTv.setTypeface(typeface);
     }
+
     @Override
     protected void initView() {
 
@@ -169,12 +171,12 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
 
 
     private void setCountDownTime() {
-        mParkingTimeAlertDialog = new ParkingTimeAlertDialog(getContext());
+        mParkingTimeAlertDialog = new ParkingTimeAlertNewDialog(getContext());
         mParkingTimeAlertDialog.show();
     }
 
     //正在进行连接
-    private void connectingView(){
+    private void connectingView() {
         mCompass.connected();
         mConnectedState1View.setVisibility(View.VISIBLE);
         mConnectedState2View.setVisibility(View.GONE);
@@ -193,6 +195,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         mSetAlertIv.setVisibility(View.GONE);
         mConnectedIv.setVisibility(View.GONE);
         mParkLongTv.setVisibility(View.GONE);
+        linOnlyMinute.setVisibility(View.GONE);
         mParkLongTv.setText(R.string.fyndr_is_connect);
         mParkLongTv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
     }
@@ -219,7 +222,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         mDescTv.setVisibility(View.GONE);
         mAlertTimeCountdownTv.setVisibility(View.GONE);
         mSetAlertIv.setVisibility(View.GONE);
-
+        linOnlyMinute.setVisibility(View.GONE);
         mParkLongTv.setVisibility(View.VISIBLE);
         mParkLongTv.setText(R.string.fyndr_is_connect);
         mParkLongTv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
@@ -232,8 +235,14 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         mConnectedState1View.setTextColor(getResources().getColor(R.color.white));
         mConnectedIv.setVisibility(View.GONE);
         mSetAlertIv.setVisibility(mAlertTimeCountdownTv.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
-        mParkLongTv.setVisibility(View.VISIBLE);
-        mParkLongTv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        if (mParkTime < 60) {
+            linOnlyMinute.setVisibility(View.VISIBLE);
+            mParkLongTv.setVisibility(View.GONE);
+        } else {
+            linOnlyMinute.setVisibility(View.GONE);
+            mParkLongTv.setVisibility(View.VISIBLE);
+            mParkLongTv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        }
         mLocatorAccuracyTv.setVisibility(View.VISIBLE);
         mDistanceFromCarTv.setVisibility(View.VISIBLE);
         mUnitTv.setVisibility(View.VISIBLE);
@@ -316,7 +325,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
             mCurrentLocation = location;
             if (isNavi) {
                 showCompassInNavi();
-            } else if(isConnected) {
+            } else if (isConnected) {
                 showCompassInConnected();
             }
         }
@@ -348,7 +357,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
 
             String unit = isMeterUnitType ? getString(R.string.setting_unit_meters) : getString(R.string.setting_unit_feet);
             int len = isMeterUnitType ? 5 : (int) (5 * UnitType.METER_TO_FEET);
-            mConnectedState2View.setText(getString(R.string.compass_within_text,len,unit));
+            mConnectedState2View.setText(getString(R.string.compass_within_text, len, unit));
             mConnectedState1View.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
             mConnectedState2View.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
 
@@ -450,7 +459,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
 
     private void getLastParkTime() {
         long lastTime = AppDataManager.getInstance().getLong(AppDataManager.KEY.LAST_PARK_TIME_KEY);
-        if(lastTime < 1) {
+        if (lastTime < 1) {
             mSetAlertIv.setVisibility(View.VISIBLE);
             return;
         }
@@ -459,7 +468,8 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         if (time < 0 || lastTime < 1) {
         } else {
             mParkTime = time / MIN;
-            mParkLongTv.setText(formatTime(mParkTime));
+//            mParkLongTv.setText(formatTime(mParkTime));
+            initParkingTimeState();
         }
         mHandler.sendEmptyMessageDelayed(0, MIN);
 
@@ -473,6 +483,18 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
 
     }
 
+    private void initParkingTimeState() {
+        if (mParkTime < 60) {
+            linOnlyMinute.setVisibility(View.VISIBLE);
+            mParkLongTv.setVisibility(View.GONE);
+            tvOnlyMinute.setText(mParkTime + "");
+        } else {
+            linOnlyMinute.setVisibility(View.GONE);
+            mParkLongTv.setVisibility(View.VISIBLE);
+            mParkLongTv.setText(formatTime(mParkTime));
+        }
+    }
+
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -480,7 +502,8 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
                 case 0:
                     mHandler.removeMessages(0);
                     mParkTime++;
-                    mParkLongTv.setText(formatTime(mParkTime));
+//                    mParkLongTv.setText(formatTime(mParkTime));
+                    initParkingTimeState();
                     mHandler.sendEmptyMessageDelayed(0, MIN);
                     break;
                 case 1:
@@ -505,7 +528,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         } else {
             mSetAlertIv.setVisibility(View.GONE);
             mAlertTimeCountdownTv.setVisibility(View.VISIBLE);
-            LogUtil.e("CompassFragment","showAlertTime mAlertCountdownTime > 1");
+            LogUtil.e("CompassFragment", "showAlertTime mAlertCountdownTime > 1");
         }
 
         long hours = mAlertCountdownTime / (60 * 60);
@@ -540,11 +563,11 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
         if (time < 1) {
             str = getString(R.string.compass_park_time_less_minute);
         } else if (time < 60) {
-            str = getString(R.string.compass_park_time_minute_ago,time);
+            str = getString(R.string.compass_park_time_minute_ago, time);
         } else if (time < 24 * 60) {
             long hours = time / 60;
             long mins = time % 60;
-            str = getString(R.string.compass_park_time_hours_ago,hours,mins);
+            str = getString(R.string.compass_park_time_hours_ago, hours, mins);
         } else {
             long days = time / 24 / 60;
             long hours = time % (24 * 60) / 60;
@@ -660,7 +683,7 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
 
     private void stateView() {
         int status = StatusManage.getInstance().getStatus();
-        if(mCurStatus == status)
+        if (mCurStatus == status)
             return;
         mCurStatus = status;
         switch (status) {
@@ -669,9 +692,9 @@ public class CompassFragment extends BaseFragment implements View.OnClickListene
                 mHandler.removeMessages(0);
                 mHandler.removeMessages(1);
                 setNaviMode(false);
-                if(mParkingTimeAlertDialog != null)
+                if (mParkingTimeAlertDialog != null)
                     mParkingTimeAlertDialog.dismissDialog();
-                if(mPhotoSettingDialog != null)
+                if (mPhotoSettingDialog != null)
                     mPhotoSettingDialog.dismiss();
                 break;
 

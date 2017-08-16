@@ -196,6 +196,8 @@ public class FoundDevicesFragment extends BaseFragment implements View.OnClickLi
             return;
         else
             scanLeDevice(true);
+//        new ParkingTimeAlertNewDialog(getContext()).show();
+//            new ShareNewDialog(getActivity(), "http://www.baidu.com").show();
     }
 
     private void shareUmplatforms() {

@@ -22,7 +22,7 @@
     <string name="park_time_time_up">时间到</string>
     <string name="alert_disconnected_text">定位保存成功，你需要设置停车计时闹铃吗？</string>
     <string name="alert_locaion_fail_text">没有GPS信号，建议你拍照</string>
-    <string name="setting_park_time_title">设置停车时间提醒你</string>
+    <string name="setting_park_time_title">设置停车时间</string>
     <string name="setting_park_time_30m">30分钟</string>
     <string name="setting_park_time_45m">45 分钟</string>
     <string name="setting_park_time_1h">1 小时</string>

@@ -73,6 +73,8 @@ dependencies {
     compile 'com.google.android.gms:play-services:8.4.0'
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'com.squareup.okhttp:okhttp:2.4.0'
+//滚轮
+    compile 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
     compile files('libs/SocialSDK_email.jar')
     compile files('libs/SocialSDK_facebook.jar')
     compile files('libs/SocialSDK_sms.jar')

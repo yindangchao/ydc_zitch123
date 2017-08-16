@@ -201,6 +201,65 @@ public final class UMengUtils {
         share(context, title, content, targetUrl, new UMImage(context, imgUrl), listener);
     }
 
+
+    /**
+     * 分享网络图片使用七牛缩略图的函数
+     * 参数
+     *
+     * @Param context ： activity
+     * @Param platform: 分享的平台
+     * @Param title ： 分享标题
+     * @Param targetUrl ： 分享链接的地址
+     * @Param imgUrl ： 本地的图片资源
+     * @Param appendThummnail： 是否对图片使用七牛的缩略图
+     * @Param listener ： 分享回调
+     */
+    public static void share(Activity context, SHARE_PLATFORM platform, String title, String content, String targetUrl, int imgUrl, final UMengShareListener listener) {
+
+        UMImage umImage = new UMImage(context, imgUrl);
+        UMWeb umWeb = new UMWeb(targetUrl);
+        umWeb.setTitle(title);
+        umWeb.setDescription(content);
+        umWeb.setThumb(umImage);
+
+        new ShareAction(context)
+                .setPlatform(convertPlatform(platform))
+                .withMedia(umWeb).setCallback(new UMShareListener() {
+            @Override
+            public void onStart(SHARE_MEDIA share_media) {
+                if (listener != null) {
+                    SHARE_PLATFORM platform = convertPlatform(share_media);
+                    listener.onStart(platform);
+                }
+            }
+
+            @Override
+            public void onResult(SHARE_MEDIA share_media) {
+                if (listener != null) {
+                    SHARE_PLATFORM platform = convertPlatform(share_media);
+                    listener.onResult(platform);
+                }
+            }
+
+            @Override
+            public void onError(SHARE_MEDIA share_media, Throwable throwable) {
+                if (listener != null) {
+                    SHARE_PLATFORM platform = convertPlatform(share_media);
+                    listener.onError(platform, throwable);
+                }
+            }
+
+            @Override
+            public void onCancel(SHARE_MEDIA share_media) {
+                if (listener != null) {
+                    SHARE_PLATFORM platform = convertPlatform(share_media);
+                    listener.onCancel(platform);
+                }
+            }
+        }).share();
+    }
+
+
     /**
      * 分享网络图片使用七牛缩略图的函数
      * 参数

@@ -18,10 +18,10 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-
 
 import com.vanpro.zitech125.MyApplication;
 
@@ -103,8 +103,7 @@ public class AndroidUtils {
     }
 
     public static int getStatusBarHeight(Context context) {
-        if (statusBarHeight < 0)
-        {
+        if (statusBarHeight < 0) {
             Class<?> c = null;
             Object obj = null;
             Field field = null;
@@ -214,11 +213,12 @@ public class AndroidUtils {
 
     /**
      * 获取channelID
+     *
      * @param context
      * @return
      */
-    public static String getChannelId(Context context){
-        return getMetaData(context,"Channel ID");
+    public static String getChannelId(Context context) {
+        return getMetaData(context, "Channel ID");
     }
 
 
@@ -282,11 +282,9 @@ public class AndroidUtils {
     }
 
     /**
-     *
      * 获取当前手机的语言环境
-     *
      */
-    public static String getLanguage(Context context){
+    public static String getLanguage(Context context) {
         String able = context.getResources().getConfiguration().locale.getLanguage();
         return able.toUpperCase();
     }
@@ -331,7 +329,7 @@ public class AndroidUtils {
     /**
      * 获取当前系统版本名称
      */
-    public static String getSystemVersionName(){
+    public static String getSystemVersionName() {
         return Build.VERSION.RELEASE;
     }
 
@@ -359,7 +357,7 @@ public class AndroidUtils {
 
 
     /**
-     *判断当前应用程序处于前台还是后台
+     * 判断当前应用程序处于前台还是后台
      */
     public static boolean applicationHasRunning(final Context context) {
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
@@ -382,7 +380,7 @@ public class AndroidUtils {
 
         boolean isRunning = false;
 
-        for (int i=0; i<serviceList.size(); i++) {
+        for (int i = 0; i < serviceList.size(); i++) {
             if (serviceList.get(i).service.getClassName().equals("BluetoothLeService") == true) {
                 isRunning = true;
                 break;
@@ -446,6 +444,10 @@ public class AndroidUtils {
     public static boolean checkStoragePermission(Context context) {
         return ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    public static int dp2px(Context mContext, float dpVal) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dpVal, mContext.getResources().getDisplayMetrics());
     }
 
 }
