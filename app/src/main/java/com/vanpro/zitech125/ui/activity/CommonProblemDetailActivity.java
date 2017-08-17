@@ -1,6 +1,7 @@
 package com.vanpro.zitech125.ui.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.vanpro.zitech125.R;
@@ -22,6 +23,7 @@ public class CommonProblemDetailActivity extends CustomToolbarActivity {
 
         setContentView(R.layout.activity_common_problem_detail);
         setTitle(R.string.setting_common_problem);
+        getTitleBar().getBackBtn().setVisibility(View.GONE);
 
         mIndex = getIntent().getIntExtra("index",1);
     }

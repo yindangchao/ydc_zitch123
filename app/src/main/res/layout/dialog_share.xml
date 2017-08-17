@@ -104,6 +104,7 @@
         <RelativeLayout
             android:id="@+id/layout_viber"
             android:layout_width="@dimen/dp_0"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             android:layout_weight="1">
 

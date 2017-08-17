@@ -107,13 +107,13 @@
     <string name="compass_last_park_time">Last Parking Time</string>
     <string name="compass_park_time_less_minute">Less than a minute ago</string>
     <string name="compass_action_desc">Press home button to close the app\nleaving it working in the background</string>
-    <string name="fyndr_is_connect">Fyndr is Connected\n\nPress the home button\n to close the Fyndr app.\nLeaving it to run in the background.</string>
+    <string name="fyndr_is_connect"> Fyndr is Connecting\n\nPress the home button\nto close the Fyndr app,\nleaving it run in the background.</string>
     <string name="compass_within_text">Within %1$d %2$s</string>
     <string name="compass_park_time_minute_ago">%1$d mins ago</string>
     <string name="compass_park_time_hours_ago">%1$d hours %2$d mins ago</string>
 
-    <string name="found_devices_again">Connecting..</string>
-    <string name="found_devices_scaning">Scanning..</string>
+    <string name="found_devices_again">Press to Connect</string>
+    <string name="found_devices_scaning">Connecting..</string>
 
     <!-- map -->
     <string name="map_ble_connected">Fyndr is Connected</string>

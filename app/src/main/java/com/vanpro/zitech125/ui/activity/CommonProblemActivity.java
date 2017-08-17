@@ -17,8 +17,8 @@ public class CommonProblemActivity extends CustomToolbarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_common_problem);
-
         setTitle(R.string.setting_common_problems);
+        getTitleBar().getBackBtn().setVisibility(View.GONE);
     }
 
     @Override
