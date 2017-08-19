@@ -169,7 +169,7 @@
     <string name="common_problem_2_content"> You can leave your Fyndr in your 12V power socket – you do not have to take it with you. When you have parked your car and have turned off your engine, Fyndr will automatically pin your location using the GPS on your phone. </string>
     <string name="common_problem_3_title">3.  What happens if Fyndr is directing me to my parked car location and it is not there?  </string>
     <string name="common_problem_4_title">4. What happens if I park my car and Fyndr cannot locate my location to pin?</string>
-    <string name="common_problem_3_content">Fyndr will always take you to the location where your vehicle was last parked. If Fyndr is directing you to a location and your parked par is not located in this location, it may indicate your vehicle has been moved from this location. If your vehicle is not located where Fyndr has directed you, someone may have moved it.</string>
+    <string name="common_problem_3_content">Fyndr will always take you to the location where your vehicle was last parked. If Fyndr is directing you to a location and your parked car is not located in this location, it may indicate your vehicle has been moved from this location. If your vehicle is not located where Fyndr has directed you, someone may have moved it.</string>
     <string name="common_problem_4_content">Fyndr will detect the location of your parked car with GPS access. If you are parked indoors or in an underground / multi-level cart park Fyndr may lose a direct line to GPS satellite. In this instance Fyndr will suggest you take an image of your surroundings using your smart phone camera to help find the location of your parked car later on.</string>
 
     <string name="setting_version_title">Version Code v</string>
