@@ -1,4 +1,5 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
     <!--- 英语 -->
     <string name="app_name">Fyndr</string>
     <string name="title_activity_maps">Fyndr</string>
